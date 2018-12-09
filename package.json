@@ -1,0 +1,22 @@
+{
+  "name": "i2cBus.js",
+  "version": "0.0.0-development",
+  "description": "Bus and Device classes for i2c-bus, with promised functions.",
+  "main": "index.js",
+  "repository": "git@github.com:AlejandroHerr/i2cBus.js.git",
+  "author": "AlejandroHerr <hola@alejandroherr.io>",
+  "license": "MIT",
+  "scripts": {
+    "cz": "git-cz",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0",
+    "semantic-release": "^15.12.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
