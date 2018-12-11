@@ -2,21 +2,42 @@
   "name": "i2cBus.js",
   "version": "0.0.0-development",
   "description": "Bus and Device classes for i2c-bus, with promised functions.",
-  "main": "index.js",
+  "main": "dist/main/index.js",
+  "typings": "dist/main/index.d.ts",
+  "module": "dist/module/index.js",
   "repository": "git@github.com:AlejandroHerr/i2cBus.js.git",
   "author": "AlejandroHerr <hola@alejandroherr.io>",
   "license": "MIT",
   "scripts": {
+    "build": "run-s clean && run-p build:*",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json",
+    "clean": "rm -rf dist",
+    "fix": "run-s fix:*",
+    "fix:prettier": "prettier \"src/**/*.ts\" --write",
+    "fix:tslint": "tslint --fix --project .",
+    "lint": "run-s -c lint:*",
+    "lint:prettier": "prettier \"src/**/*.ts\" --list-different",
+    "lint:tslint": "tslint --project .",
     "cz": "git-cz",
-    "semantic-release": "semantic-release"
+    "release": "semantic-release || true"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^2.1.0",
-    "semantic-release": "^15.12.4"
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.15.3",
+    "semantic-release": "^15.12.4",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-immutable": "^5.0.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@types/node": "^10.12.12",
+    "typescript": "^3.2.2"
   }
 }
