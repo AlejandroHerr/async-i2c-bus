@@ -42,7 +42,11 @@
     }
   },
   "dependencies": {
+    "@types/bluebird": "^3.5.24",
+    "@types/i2c-bus": "^1.0.19",
     "@types/node": "^10.12.12",
+    "bluebird": "^3.5.3",
+    "i2c-bus": "^4.0.6",
     "typescript": "^3.2.2"
   }
 }
