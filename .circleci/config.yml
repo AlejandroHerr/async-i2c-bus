@@ -17,7 +17,7 @@ jobs:
           command: yarn install
       - persist_to_workspace:
           root: .
-          paths: node_modules
+          paths: .
   build:
     <<: *defaults
     steps:
@@ -45,6 +45,14 @@ jobs:
       - run:
           name: Lint
           command: yarn lint
+  release:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/i2c-bus.js
+      - run:
+          name: Release
+          command: ls -la
 
 workflows:
   version: 2
