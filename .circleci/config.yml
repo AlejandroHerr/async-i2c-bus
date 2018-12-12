@@ -1,0 +1,62 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/i2c-bus.js
+  docker:
+    - image: circleci/node:dubnium-stretch
+
+jobs:
+  checkout:
+    <<: *defaults
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
+      - run:
+          name: Install Dependencies
+          command: yarn install
+      - persist_to_workspace:
+          root: .
+          paths: node_modules
+  build:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
+      - run:
+          name: build
+          command: yarn build
+      - persist_to_workspace:
+          root: .
+          paths: dist
+  test:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
+      - run:
+          name: Test
+          command: yarn test
+  lint:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/circleci-demo-workflows
+      - run:
+          name: Lint
+          command: yarn lint
+
+workflows:
+  version: 2
+  main_flow:
+    jobs:
+      - checkout
+      - build:
+          requires:
+            - checkout
+      - test:
+          requires:
+            - checkout
+      - lint:
+          requires:
+            - checkout
