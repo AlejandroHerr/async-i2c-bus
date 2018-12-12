@@ -68,3 +68,8 @@ workflows:
       - lint:
           requires:
             - checkout
+      - lint:
+          requires:
+            - build
+            - test
+            - lint
