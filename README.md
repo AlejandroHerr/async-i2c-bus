@@ -1,0 +1,3 @@
+# i2c-bus.js
+
+![](https://img.shields.io/npm/v/i2c-bus.js.svg) ![](https://img.shields.io/david/AlejandroHerr/i2c-bus.js.svg?style=flat-square) ![](https://img.shields.io/david/dev/AlejandroHerr/i2c-bus.js.svg?style=flat-square) ![CircleCI](https://img.shields.io/circleci/project/github/AlejandroHerr/i2c-bus.js/master.svg?style=flat-square&logo=circleci) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) ![](https://img.shields.io/github/license/AlejandroHerr/i2c-bus.js.svg?style=flat-square)
