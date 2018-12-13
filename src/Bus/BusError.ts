@@ -4,9 +4,7 @@ export default class BusError extends Error {
   constructor(msg: string, busNumber: number) {
     super(msg);
 
-    if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, BusError);
-    }
+    Error.captureStackTrace(this, BusError);
 
     this.busNumber = busNumber;
   }
