@@ -5,13 +5,13 @@ import { I2cBusPromised } from '../types';
 
 import BusError from './BusError';
 
-export interface BusInterface {
+interface Bus {
   readonly busNumber: number;
   readonly i2cBus: I2cBusPromised | null;
   readonly isOpen: boolean;
 
-  open: () => Promise<BusInterface>;
-  close: () => Promise<BusInterface>;
+  open: () => Promise<Bus>;
+  close: () => Promise<Bus>;
 
   i2cFuncs: () => Promise<I2cBusFuncs>;
   scan: () => Promise<number[]>;
@@ -31,7 +31,7 @@ export interface BusInterface {
   writeI2cBlock: (address: number, command: number, length: number, buffer: Buffer) => Promise<number>;
 }
 
-export default ({ busNumber = 1, openI2cBus = openI2cBusFn } = {}): BusInterface => {
+const Bus = ({ busNumber = 1, openI2cBus = openI2cBusFn } = {}): Bus => {
   let i2cBus: I2cBusPromised | null = null;
   let isOpen: boolean = false;
 
@@ -61,7 +61,7 @@ export default ({ busNumber = 1, openI2cBus = openI2cBusFn } = {}): BusInterface
     },
     async close() {
       if (!i2cBus || !isOpen) {
-        throw new BusError('BusInterface is not open', busNumber);
+        throw new BusError('Bus is not open', busNumber);
       }
 
       await i2cBus.closeAsync();
@@ -74,14 +74,14 @@ export default ({ busNumber = 1, openI2cBus = openI2cBusFn } = {}): BusInterface
 
     async i2cFuncs() {
       if (!i2cBus || !isOpen) {
-        throw new BusError('BusInterface is not open', busNumber);
+        throw new BusError('Bus is not open', busNumber);
       }
 
       return i2cBus.i2cFuncsAsync();
     },
     async scan() {
       if (!i2cBus || !isOpen) {
-        throw new BusError('BusInterface is not open', busNumber);
+        throw new BusError('Bus is not open', busNumber);
       }
 
       return i2cBus.scanAsync();
@@ -89,14 +89,14 @@ export default ({ busNumber = 1, openI2cBus = openI2cBusFn } = {}): BusInterface
 
     async i2cRead(address: number, length: number, buffer: Buffer) {
       if (!i2cBus || !isOpen) {
-        throw new BusError('BusInterface is not open', busNumber);
+        throw new BusError('Bus is not open', busNumber);
       }
 
       return i2cBus.i2cReadAsync(address, length, buffer);
     },
     async i2cWrite(address: number, length: number, buffer: Buffer) {
       if (!i2cBus || !isOpen) {
-        throw new BusError('BusInterface is not open', busNumber);
+        throw new BusError('Bus is not open', busNumber);
       }
 
       return i2cBus.i2cWriteAsync(address, length, buffer);
@@ -104,14 +104,14 @@ export default ({ busNumber = 1, openI2cBus = openI2cBusFn } = {}): BusInterface
 
     async receiveByte(address: number) {
       if (!i2cBus || !isOpen) {
-        throw new BusError('BusInterface is not open', busNumber);
+        throw new BusError('Bus is not open', busNumber);
       }
 
       return i2cBus.receiveByteAsync(address);
     },
     async sendByte(address: number, byte: number) {
       if (!i2cBus || !isOpen) {
-        throw new BusError('BusInterface is not open', busNumber);
+        throw new BusError('Bus is not open', busNumber);
       }
 
       return i2cBus.sendByteAsync(address, byte);
@@ -119,21 +119,21 @@ export default ({ busNumber = 1, openI2cBus = openI2cBusFn } = {}): BusInterface
 
     async readByte(address: number, command: number) {
       if (!i2cBus || !isOpen) {
-        throw new BusError('BusInterface is not open', busNumber);
+        throw new BusError('Bus is not open', busNumber);
       }
 
       return i2cBus.readByteAsync(address, command);
     },
     async readWord(address: number, command: number) {
       if (!i2cBus || !isOpen) {
-        throw new BusError('BusInterface is not open', busNumber);
+        throw new BusError('Bus is not open', busNumber);
       }
 
       return i2cBus.readWordAsync(address, command);
     },
     async readI2cBlock(address: number, command: number, length: number, buffer: Buffer) {
       if (!i2cBus || !isOpen) {
-        throw new BusError('BusInterface is not open', busNumber);
+        throw new BusError('Bus is not open', busNumber);
       }
 
       return i2cBus.readI2cBlockAsync(address, command, length, buffer);
@@ -141,24 +141,26 @@ export default ({ busNumber = 1, openI2cBus = openI2cBusFn } = {}): BusInterface
 
     async writeByte(address: number, command: number, byte: number) {
       if (!i2cBus || !isOpen) {
-        throw new BusError('BusInterface is not open', busNumber);
+        throw new BusError('Bus is not open', busNumber);
       }
 
       return i2cBus.writeByteAsync(address, command, byte);
     },
     async writeWord(address: number, command: number, word: number) {
       if (!i2cBus || !isOpen) {
-        throw new BusError('BusInterface is not open', busNumber);
+        throw new BusError('Bus is not open', busNumber);
       }
 
       return i2cBus.writeWordAsync(address, command, word);
     },
     async writeI2cBlock(address: number, command: number, length: number, buffer: Buffer) {
       if (!i2cBus || !isOpen) {
-        throw new BusError('BusInterface is not open', busNumber);
+        throw new BusError('Bus is not open', busNumber);
       }
 
       return i2cBus.writeI2cBlockAsync(address, command, length, buffer);
     },
   };
 };
+
+export default Bus;
