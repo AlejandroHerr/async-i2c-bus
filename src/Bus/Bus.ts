@@ -1,5 +1,5 @@
 import { promisifyAll } from 'bluebird';
-import { I2cBusFuncs, open as openI2cBusFn } from 'i2c-bus';
+import { I2cBusFuncs, open as openI2cBus } from 'i2c-bus';
 
 import { I2cBusPromised } from '../types';
 
@@ -31,7 +31,7 @@ interface Bus {
   writeI2cBlock: (address: number, command: number, length: number, buffer: Buffer) => Promise<number>;
 }
 
-const Bus = ({ busNumber = 1, openI2cBus = openI2cBusFn } = {}): Bus => {
+const Bus = ({ busNumber = 1, openBus = openI2cBus } = {}): Bus => {
   let i2cBus: I2cBusPromised | null = null;
   let isOpen: boolean = false;
 
@@ -48,7 +48,7 @@ const Bus = ({ busNumber = 1, openI2cBus = openI2cBusFn } = {}): Bus => {
 
     open() {
       return new Promise((resolve, reject) => {
-        i2cBus = promisifyAll<I2cBusPromised>(openI2cBus(this.busNumber, (error: Error) => {
+        i2cBus = promisifyAll<I2cBusPromised>(openBus(this.busNumber, (error: Error) => {
           if (error) {
             reject(`Error opening i2c bus: ${error.message}`);
           }
