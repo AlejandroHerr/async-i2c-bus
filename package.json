@@ -1,5 +1,5 @@
 {
-  "name": "i2c-bus.js",
+  "name": "async-i2c-bus",
   "version": "0.0.0-development",
   "description": "Bus and Device classes for i2c-bus, with promised functions.",
   "main": "dist/main/index.js",
