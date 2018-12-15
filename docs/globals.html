@@ -1,0 +1,495 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>i2c-bus.js</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">i2c-bus.js</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> i2c-bus.js</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class"><a href="classes/buserror.html" class="tsd-kind-icon">Bus<wbr>Error</a></li>
+								<li class="tsd-kind-class"><a href="classes/deviceerror.html" class="tsd-kind-icon">Device<wbr>Error</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface"><a href="interfaces/businterface.html" class="tsd-kind-icon">Bus<wbr>Interface</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/deviceinterface.html" class="tsd-kind-icon">Device<wbr>Interface</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/i2cbuspromised.html" class="tsd-kind-icon">I2c<wbr>Bus<wbr>Promised</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function"><a href="globals.html#bus" class="tsd-kind-icon">Bus</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#device" class="tsd-kind-icon">Device</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#createi2cbusmock" class="tsd-kind-icon">create<wbr>I2c<wbr>Bus<wbr>Mock</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-is-not-exported"><a href="globals.html#defaulti2cbusfuncs" class="tsd-kind-icon">default<wbr>I2c<wbr>Bus<wbr>Funcs</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="bus" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Bus</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">Bus<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/businterface.html" class="tsd-signature-type">BusInterface</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/Bus.ts#L8">lib/Bus.ts:8</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> __namedParameters: <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>bus<wbr>Number<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>open<wbr>Bus<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">open</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="interfaces/businterface.html" class="tsd-signature-type">BusInterface</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="device" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Device</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">Device<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/deviceinterface.html" class="tsd-signature-type">DeviceInterface</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/Device.ts#L4">lib/Device.ts:4</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>bus<span class="tsd-signature-symbol">: </span><a href="interfaces/businterface.html" class="tsd-signature-type">BusInterface</a></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="interfaces/deviceinterface.html" class="tsd-signature-type">DeviceInterface</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="createi2cbusmock" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> create<wbr>I2c<wbr>Bus<wbr>Mock</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>I2c<wbr>Bus<wbr>Mock<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">open</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L24">lib/createI2cBusMock.ts:24</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> __namedParameters: <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>devices<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
+											<ul class="tsd-parameters">
+												<li class="tsd-parameter-index-signature">
+													<h5><span class="tsd-signature-symbol">[</span>address: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">Buffer</span></h5>
+												</li>
+											</ul>
+										</li>
+										<li class="tsd-parameter">
+											<h5>i2c<wbr>Bus<wbr>Funcs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">I2cBusFuncs</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">open</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-is-not-exported">
+					<a name="defaulti2cbusfuncs" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> default<wbr>I2c<wbr>Bus<wbr>Funcs</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>I2c<wbr>Bus<wbr>Funcs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L3">lib/createI2cBusMock.ts:3</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.i2c" class="tsd-anchor"></a>
+						<h3>i2c</h3>
+						<div class="tsd-signature tsd-kind-icon">i2c<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L4">lib/createI2cBusMock.ts:4</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.protocolmangling" class="tsd-anchor"></a>
+						<h3>protocol<wbr>Mangling</h3>
+						<div class="tsd-signature tsd-kind-icon">protocol<wbr>Mangling<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L6">lib/createI2cBusMock.ts:6</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.smbusblockproccall" class="tsd-anchor"></a>
+						<h3>smbus<wbr>Block<wbr>Proc<wbr>Call</h3>
+						<div class="tsd-signature tsd-kind-icon">smbus<wbr>Block<wbr>Proc<wbr>Call<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L8">lib/createI2cBusMock.ts:8</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.smbuspec" class="tsd-anchor"></a>
+						<h3>smbus<wbr>Pec</h3>
+						<div class="tsd-signature tsd-kind-icon">smbus<wbr>Pec<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L7">lib/createI2cBusMock.ts:7</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.smbusproccall" class="tsd-anchor"></a>
+						<h3>smbus<wbr>Proc<wbr>Call</h3>
+						<div class="tsd-signature tsd-kind-icon">smbus<wbr>Proc<wbr>Call<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L16">lib/createI2cBusMock.ts:16</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.smbusquick" class="tsd-anchor"></a>
+						<h3>smbus<wbr>Quick</h3>
+						<div class="tsd-signature tsd-kind-icon">smbus<wbr>Quick<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L9">lib/createI2cBusMock.ts:9</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.smbusreadblock" class="tsd-anchor"></a>
+						<h3>smbus<wbr>Read<wbr>Block</h3>
+						<div class="tsd-signature tsd-kind-icon">smbus<wbr>Read<wbr>Block<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L17">lib/createI2cBusMock.ts:17</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.smbusreadbyte" class="tsd-anchor"></a>
+						<h3>smbus<wbr>Read<wbr>Byte</h3>
+						<div class="tsd-signature tsd-kind-icon">smbus<wbr>Read<wbr>Byte<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L12">lib/createI2cBusMock.ts:12</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.smbusreadi2cblock" class="tsd-anchor"></a>
+						<h3>smbus<wbr>Read<wbr>I2c<wbr>Block</h3>
+						<div class="tsd-signature tsd-kind-icon">smbus<wbr>Read<wbr>I2c<wbr>Block<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L19">lib/createI2cBusMock.ts:19</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.smbusreadword" class="tsd-anchor"></a>
+						<h3>smbus<wbr>Read<wbr>Word</h3>
+						<div class="tsd-signature tsd-kind-icon">smbus<wbr>Read<wbr>Word<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L14">lib/createI2cBusMock.ts:14</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.smbusreceivebyte" class="tsd-anchor"></a>
+						<h3>smbus<wbr>Receive<wbr>Byte</h3>
+						<div class="tsd-signature tsd-kind-icon">smbus<wbr>Receive<wbr>Byte<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L10">lib/createI2cBusMock.ts:10</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.smbussendbyte" class="tsd-anchor"></a>
+						<h3>smbus<wbr>Send<wbr>Byte</h3>
+						<div class="tsd-signature tsd-kind-icon">smbus<wbr>Send<wbr>Byte<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L11">lib/createI2cBusMock.ts:11</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.smbuswriteblock" class="tsd-anchor"></a>
+						<h3>smbus<wbr>Write<wbr>Block</h3>
+						<div class="tsd-signature tsd-kind-icon">smbus<wbr>Write<wbr>Block<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L18">lib/createI2cBusMock.ts:18</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.smbuswritebyte" class="tsd-anchor"></a>
+						<h3>smbus<wbr>Write<wbr>Byte</h3>
+						<div class="tsd-signature tsd-kind-icon">smbus<wbr>Write<wbr>Byte<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L13">lib/createI2cBusMock.ts:13</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.smbuswritei2cblock" class="tsd-anchor"></a>
+						<h3>smbus<wbr>Write<wbr>I2c<wbr>Block</h3>
+						<div class="tsd-signature tsd-kind-icon">smbus<wbr>Write<wbr>I2c<wbr>Block<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L20">lib/createI2cBusMock.ts:20</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.smbuswriteword" class="tsd-anchor"></a>
+						<h3>smbus<wbr>Write<wbr>Word</h3>
+						<div class="tsd-signature tsd-kind-icon">smbus<wbr>Write<wbr>Word<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L15">lib/createI2cBusMock.ts:15</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="defaulti2cbusfuncs.tenbitaddr" class="tsd-anchor"></a>
+						<h3>ten<wbr>Bit<wbr>Addr</h3>
+						<div class="tsd-signature tsd-kind-icon">ten<wbr>Bit<wbr>Addr<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/AlejandroHerr/i2c-bus.js/blob/1b033af/src/lib/createI2cBusMock.ts#L5">lib/createI2cBusMock.ts:5</a></li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals current ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/buserror.html" class="tsd-kind-icon">Bus<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/deviceerror.html" class="tsd-kind-icon">Device<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/businterface.html" class="tsd-kind-icon">Bus<wbr>Interface</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/deviceinterface.html" class="tsd-kind-icon">Device<wbr>Interface</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/i2cbuspromised.html" class="tsd-kind-icon">I2c<wbr>Bus<wbr>Promised</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#bus" class="tsd-kind-icon">Bus</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#device" class="tsd-kind-icon">Device</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#createi2cbusmock" class="tsd-kind-icon">create<wbr>I2c<wbr>Bus<wbr>Mock</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-not-exported">
+						<a href="globals.html#defaulti2cbusfuncs" class="tsd-kind-icon">default<wbr>I2c<wbr>Bus<wbr>Funcs</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
