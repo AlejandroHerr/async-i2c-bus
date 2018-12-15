@@ -1,4 +1,4 @@
-import { BufferCallback, CompletionCallback, I2cBus, I2cBusFuncs, ResultCallback } from 'i2c-bus';
+import { BufferCallback, CompletionCallback, I2cBus, I2cBusFuncs, open, ResultCallback } from 'i2c-bus';
 
 const defaultI2cBusFuncs = {
   i2c: false,
@@ -21,13 +21,13 @@ const defaultI2cBusFuncs = {
 };
 
 // @TODO Add full features
-export default ({
+const createI2cBusMock = ({
   devices = {},
   i2cBusFuncs = defaultI2cBusFuncs,
 }: {
   devices?: { [address: number]: Buffer };
   i2cBusFuncs?: I2cBusFuncs;
-} = {}) => (_: number, openCallback: CompletionCallback): I2cBus => {
+} = {}): typeof open => (_: number, openCallback: CompletionCallback): I2cBus => {
   openCallback(null);
 
   return {
@@ -120,3 +120,5 @@ export default ({
     },
   };
 };
+
+export default createI2cBusMock;
