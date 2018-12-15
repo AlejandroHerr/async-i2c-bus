@@ -1,9 +1,5 @@
 import { BufferCallback, CompletionCallback, I2cBus, I2cBusFuncs, ResultCallback } from 'i2c-bus';
 
-interface Devices {
-  [address: number]: Buffer;
-}
-
 const defaultI2cBusFuncs = {
   i2c: false,
   tenBitAddr: false,
@@ -28,7 +24,10 @@ const defaultI2cBusFuncs = {
 export default ({
   devices = {},
   i2cBusFuncs = defaultI2cBusFuncs,
-}: { devices?: Devices; i2cBusFuncs?: I2cBusFuncs } = {}) => (_: number, openCallback: CompletionCallback): I2cBus => {
+}: {
+  devices?: { [address: number]: Buffer };
+  i2cBusFuncs?: I2cBusFuncs;
+} = {}) => (_: number, openCallback: CompletionCallback): I2cBus => {
   openCallback(null);
 
   return {

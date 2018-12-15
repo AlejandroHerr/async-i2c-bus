@@ -1,4 +1,5 @@
 import Bus from './Bus';
 import BusError from './BusError';
+import BusInterface from './BusInterface';
 
-export { Bus, BusError };
+export { Bus, BusError, BusInterface };

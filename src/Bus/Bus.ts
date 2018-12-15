@@ -1,37 +1,12 @@
 import { promisifyAll } from 'bluebird';
-import { I2cBusFuncs, open as openI2cBus } from 'i2c-bus';
+import { open as openI2cBus } from 'i2c-bus';
 
 import { I2cBusPromised } from '../types';
 
 import BusError from './BusError';
+import BusInterface from './BusInterface';
 
-interface Bus {
-  readonly busNumber: number;
-  readonly i2cBus: I2cBusPromised | null;
-  readonly isOpen: boolean;
-
-  open: () => Promise<Bus>;
-  close: () => Promise<Bus>;
-
-  i2cFuncs: () => Promise<I2cBusFuncs>;
-  scan: () => Promise<number[]>;
-
-  i2cRead: (address: number, length: number, buffer: Buffer) => Promise<number>;
-  i2cWrite: (address: number, length: number, buffer: Buffer) => Promise<number>;
-
-  receiveByte: (address: number) => Promise<number>;
-  sendByte: (address: number, byte: number) => Promise<void>;
-
-  readByte: (address: number, command: number) => Promise<number>;
-  readI2cBlock: (address: number, command: number, length: number, buffer: Buffer) => Promise<number>;
-  readWord: (address: number, command: number) => Promise<number>;
-
-  writeByte: (address: number, command: number, byte: number) => Promise<void>;
-  writeWord: (address: number, command: number, word: number) => Promise<void>;
-  writeI2cBlock: (address: number, command: number, length: number, buffer: Buffer) => Promise<number>;
-}
-
-const Bus = ({ busNumber = 1, openBus = openI2cBus } = {}): Bus => {
+const Bus = ({ busNumber = 1, openBus = openI2cBus } = {}): BusInterface => {
   let i2cBus: I2cBusPromised | null = null;
   let isOpen: boolean = false;
 

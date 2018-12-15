@@ -2,8 +2,10 @@ export default class DeviceError extends Error {
   public busNumber: number;
   public deviceAddress: number;
 
-  constructor(msg: string, busNumber: number, deviceAddress: number) {
-    super(msg);
+  constructor(message: string, busNumber: number, deviceAddress: number) {
+    super(message);
+
+    this.name = this.constructor.name;
 
     Error.captureStackTrace(this, DeviceError);
 

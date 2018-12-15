@@ -1,25 +1,8 @@
-import { Bus } from '../Bus';
+import BusInterface from '../Bus/BusInterface';
 
-export interface Device {
-  readonly address: number;
-  readonly bus: Bus;
+import DeviceInterface from './DeviceInterface';
 
-  i2cRead: (length: number, buffer: Buffer) => Promise<number>;
-  i2cWrite: (length: number, buffer: Buffer) => Promise<number>;
-
-  receiveByte: () => Promise<number>;
-  sendByte: (byte: number) => Promise<void>;
-
-  readByte: (command: number) => Promise<number>;
-  readI2cBlock: (command: number, length: number, buffer: Buffer) => Promise<number>;
-  readWord: (command: number) => Promise<number>;
-
-  writeByte: (command: number, byte: number) => Promise<void>;
-  writeWord: (command: number, word: number) => Promise<void>;
-  writeI2cBlock: (command: number, length: number, buffer: Buffer) => Promise<number>;
-}
-
-const Device = ({ address, bus }: { address: number; bus: Bus }): Device => ({
+const Device = ({ address, bus }: { address: number; bus: BusInterface }): DeviceInterface => ({
   get address() {
     return address;
   },
