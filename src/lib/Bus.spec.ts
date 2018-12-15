@@ -1,9 +1,9 @@
-import { I2cBusPromised } from '../types';
 import Bus from './Bus';
 import BusError from './BusError';
+import { I2cBusPromised } from './types';
 
 jest.mock('i2c-bus', () => {
-  const createI2cBusMock = require('../createI2cBusMock').default; // eslint-disable-line global-require
+  const createI2cBusMock = require('./createI2cBusMock').default; // eslint-disable-line global-require
 
   return {
     open: createI2cBusMock({

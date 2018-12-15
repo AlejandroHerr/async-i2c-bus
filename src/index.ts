@@ -1,6 +1,9 @@
-import { Bus, BusError, BusInterface } from './Bus';
-import { Device, DeviceError, DeviceInterface } from './Device';
+import Bus from './lib/Bus';
+import BusError from './lib/BusError';
+import BusInterface from './lib/BusInterface';
+import createI2cBusMock from './lib/createI2cBusMock';
+import Device from './lib/Device';
+import DeviceError from './lib/DeviceError';
+import DeviceInterface from './lib/DeviceInterface';
 
-import createI2cBusMock from './createI2cBusMock';
-
-export { Bus, BusError, BusInterface, Device, DeviceError, DeviceInterface, createI2cBusMock };
+export { Bus, BusError, BusInterface, createI2cBusMock, Device, DeviceError, DeviceInterface };

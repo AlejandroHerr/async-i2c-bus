@@ -1,4 +1,4 @@
-import BusInterface from '../Bus/BusInterface';
+import BusInterface from './BusInterface';
 
 export default interface DeviceInterface {
   readonly address: number;

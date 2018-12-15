@@ -1,10 +1,9 @@
 import { promisifyAll } from 'bluebird';
 import { open as openI2cBus } from 'i2c-bus';
 
-import { I2cBusPromised } from '../types';
-
 import BusError from './BusError';
 import BusInterface from './BusInterface';
+import { I2cBusPromised } from './types';
 
 const Bus = ({ busNumber = 1, openBus = openI2cBus } = {}): BusInterface => {
   let i2cBus: I2cBusPromised | null = null;

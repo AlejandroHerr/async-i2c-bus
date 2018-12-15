@@ -1,5 +1,4 @@
-import BusInterface from '../Bus/BusInterface';
-
+import BusInterface from './BusInterface';
 import DeviceInterface from './DeviceInterface';
 
 const Device = ({ address, bus }: { address: number; bus: BusInterface }): DeviceInterface => ({

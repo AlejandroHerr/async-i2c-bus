@@ -1,6 +1,6 @@
 import { I2cBusFuncs } from 'i2c-bus';
 
-import { I2cBusPromised } from '../types';
+import { I2cBusPromised } from './types';
 
 export default interface BusInterface {
   readonly busNumber: number;
