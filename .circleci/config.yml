@@ -1,59 +1,66 @@
 version: 2
-
-defaults: &defaults
+defaults:
   working_directory: ~/i2c-bus.js
   docker:
-    - image: circleci/node:dubnium-stretch
-
+    - image: 'circleci/node:dubnium-stretch'
 jobs:
   checkout:
-    <<: *defaults
+    working_directory: ~/i2c-bus.js
+    docker:
+      - image: 'circleci/node:dubnium-stretch'
     steps:
       - checkout
       - attach_workspace:
           at: ~/i2c-bus.js
       - run:
-          name: Install Dependencies
-          command: yarn install
+          name: 'Install Dependencies'
+          command: 'yarn install'
       - persist_to_workspace:
           root: .
           paths: .
   build:
-    <<: *defaults
+    working_directory: ~/i2c-bus.js
+    docker:
+      - image: 'circleci/node:dubnium-stretch'
     steps:
       - attach_workspace:
           at: ~/i2c-bus.js
       - run:
           name: build
-          command: yarn build
+          command: 'yarn build'
       - persist_to_workspace:
           root: .
           paths: dist
   test:
-    <<: *defaults
+    working_directory: ~/i2c-bus.js
+    docker:
+      - image: 'circleci/node:dubnium-stretch'
     steps:
       - attach_workspace:
           at: ~/i2c-bus.js
       - run:
           name: Test
-          command: yarn test
+          command: 'yarn test'
   lint:
-    <<: *defaults
+    working_directory: ~/i2c-bus.js
+    docker:
+      - image: 'circleci/node:dubnium-stretch'
     steps:
       - attach_workspace:
           at: ~/i2c-bus.js
       - run:
           name: Lint
-          command: yarn lint
+          command: 'yarn lint'
   release:
-    <<: *defaults
+    working_directory: ~/i2c-bus.js
+    docker:
+      - image: 'circleci/node:dubnium-stretch'
     steps:
       - attach_workspace:
           at: ~/i2c-bus.js
       - run:
           name: Release
-          command: ls -la
-
+          command: 'ls -la'
 workflows:
   version: 2
   main_flow:
