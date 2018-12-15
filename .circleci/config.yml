@@ -60,7 +60,7 @@ jobs:
           at: ~/i2c-bus.js
       - run:
           name: Release
-          command: 'ls -la'
+          command: yarn release
 workflows:
   version: 2
   main_flow:
