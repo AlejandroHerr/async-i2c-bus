@@ -58,6 +58,9 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/async-i2c-bus
+      - add github ssh fingerprints:
+          fingerprints:
+            - 'SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8'
       - run:
           name: Release
           command: yarn release
