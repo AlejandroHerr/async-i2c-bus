@@ -1,17 +1,17 @@
 version: 2
 defaults:
-  working_directory: ~/i2c-bus.js
+  working_directory: ~/async-i2c-bus
   docker:
     - image: 'circleci/node:dubnium-stretch'
 jobs:
   checkout:
-    working_directory: ~/i2c-bus.js
+    working_directory: ~/async-i2c-bus
     docker:
       - image: 'circleci/node:dubnium-stretch'
     steps:
       - checkout
       - attach_workspace:
-          at: ~/i2c-bus.js
+          at: ~/async-i2c-bus
       - run:
           name: 'Install Dependencies'
           command: 'yarn install'
@@ -19,12 +19,12 @@ jobs:
           root: .
           paths: .
   build:
-    working_directory: ~/i2c-bus.js
+    working_directory: ~/async-i2c-bus
     docker:
       - image: 'circleci/node:dubnium-stretch'
     steps:
       - attach_workspace:
-          at: ~/i2c-bus.js
+          at: ~/async-i2c-bus
       - run:
           name: build
           command: 'yarn build'
@@ -32,35 +32,35 @@ jobs:
           root: .
           paths: dist
   test:
-    working_directory: ~/i2c-bus.js
+    working_directory: ~/async-i2c-bus
     docker:
       - image: 'circleci/node:dubnium-stretch'
     steps:
       - attach_workspace:
-          at: ~/i2c-bus.js
+          at: ~/async-i2c-bus
       - run:
           name: Test
           command: 'yarn test'
   lint:
-    working_directory: ~/i2c-bus.js
+    working_directory: ~/async-i2c-bus
     docker:
       - image: 'circleci/node:dubnium-stretch'
     steps:
       - attach_workspace:
-          at: ~/i2c-bus.js
+          at: ~/async-i2c-bus
       - run:
           name: Lint
           command: 'yarn lint'
   release:
-    working_directory: ~/i2c-bus.js
+    working_directory: ~/async-i2c-bus
     docker:
       - image: 'circleci/node:dubnium-stretch'
     steps:
       - attach_workspace:
-          at: ~/i2c-bus.js
+          at: ~/async-i2c-bus
       - run:
           name: Release
-          command: 'ls -la'
+          command: yarn release
 workflows:
   version: 2
   main_flow:
