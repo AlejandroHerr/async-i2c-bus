@@ -58,7 +58,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/async-i2c-bus
-      - add github ssh fingerprints:
+      - add_ssh_keys:
           fingerprints:
             - 'SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8'
       - run:
