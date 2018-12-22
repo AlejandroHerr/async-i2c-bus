@@ -2,6 +2,16 @@
   "name": "async-i2c-bus",
   "version": "0.0.0-development",
   "description": "Bus and Device classes for i2c-bus, with promised functions.",
+  "keywords": [
+    "i2c-bus",
+    "i2c-device",
+    "i2c-interface",
+    "i2c",
+    "pi",
+    "Raspberry Pi",
+    "raspberry",
+    "rpi"
+  ],
   "main": "dist/main/index.js",
   "typings": "dist/main/index.d.ts",
   "module": "dist/module/index.js",
