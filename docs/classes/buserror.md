@@ -32,7 +32,7 @@
 
 ⊕ **new BusError**(message: *`string`*, busNumber: *`number`*): [BusError](buserror.md)
 
-*Defined in [lib/BusError.ts:2](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/BusError.ts#L2)*
+*Defined in [lib/BusError.ts:2](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/BusError.ts#L2)*
 
 **Parameters:**
 
@@ -53,7 +53,7 @@ ___
 
 **● busNumber**: *`number`*
 
-*Defined in [lib/BusError.ts:2](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/BusError.ts#L2)*
+*Defined in [lib/BusError.ts:2](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/BusError.ts#L2)*
 
 ___
 <a id="message"></a>
@@ -64,7 +64,7 @@ ___
 
 *Inherited from Error.message*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:904*
+*Defined in /home/circleci/async-i2c-bus/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:904*
 
 ___
 <a id="name"></a>
@@ -75,7 +75,7 @@ ___
 
 *Inherited from Error.name*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:903*
+*Defined in /home/circleci/async-i2c-bus/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:903*
 
 ___
 <a id="stack"></a>
@@ -89,7 +89,7 @@ ___
 
 *Overrides Error.stack*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:905*
+*Defined in /home/circleci/async-i2c-bus/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:905*
 
 ___
 <a id="error"></a>
@@ -98,7 +98,7 @@ ___
 
 **● Error**: *`ErrorConstructor`*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:914*
+*Defined in /home/circleci/async-i2c-bus/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:914*
 
 ___
 

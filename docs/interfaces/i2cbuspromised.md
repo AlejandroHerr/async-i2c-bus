@@ -66,7 +66,7 @@
 
 *Inherited from I2cBus.close*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:44*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:44*
 
 Asynchronous close.
 
@@ -85,7 +85,7 @@ ___
 
 ▸ **closeAsync**(): `Promise`<`void`>
 
-*Defined in [lib/types.ts:5](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L5)*
+*Defined in [lib/types.ts:5](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/types.ts#L5)*
 
 **Returns:** `Promise`<`void`>
 
@@ -98,7 +98,7 @@ ___
 
 *Inherited from I2cBus.closeSync*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:49*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:49*
 
 Synchronous close.
 
@@ -113,7 +113,7 @@ ___
 
 *Inherited from I2cBus.i2cFuncs*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:57*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:57*
 
 Determine functionality of the bus/adapter asynchronously.
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **i2cFuncsAsync**(): `Promise`<`I2cBusFuncs`>
 
-*Defined in [lib/types.ts:7](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L7)*
+*Defined in [lib/types.ts:7](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/types.ts#L7)*
 
 **Returns:** `Promise`<`I2cBusFuncs`>
 
@@ -145,7 +145,7 @@ ___
 
 *Inherited from I2cBus.i2cFuncsSync*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:65*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:65*
 
 Determine functionality of the bus/adapter synchronously.
 
@@ -162,7 +162,7 @@ ___
 
 *Inherited from I2cBus.i2cRead*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:95*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:95*
 
 Asynchronous plain I2C read.
 
@@ -184,7 +184,7 @@ ___
 
 ▸ **i2cReadAsync**(address: *`number`*, length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/types.ts:10](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L10)*
+*Defined in [lib/types.ts:10](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/types.ts#L10)*
 
 **Parameters:**
 
@@ -205,7 +205,7 @@ ___
 
 *Inherited from I2cBus.i2cReadSync*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:109*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:109*
 
 Synchronous plain I2C read.
 
@@ -230,7 +230,7 @@ ___
 
 *Inherited from I2cBus.i2cWrite*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:123*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:123*
 
 Asynchronous plain I2C write.
 
@@ -252,7 +252,7 @@ ___
 
 ▸ **i2cWriteAsync**(address: *`number`*, length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/types.ts:11](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L11)*
+*Defined in [lib/types.ts:11](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/types.ts#L11)*
 
 **Parameters:**
 
@@ -273,7 +273,7 @@ ___
 
 *Inherited from I2cBus.i2cWriteSync*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:137*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:137*
 
 Synchronous plain I2C write.
 
@@ -298,7 +298,7 @@ ___
 
 *Inherited from I2cBus.readByte*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:149*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:149*
 
 Asynchronous SMBus read byte.
 
@@ -319,7 +319,7 @@ ___
 
 ▸ **readByteAsync**(address: *`number`*, command: *`number`*): `Promise`<`number`>
 
-*Defined in [lib/types.ts:16](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L16)*
+*Defined in [lib/types.ts:16](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/types.ts#L16)*
 
 **Parameters:**
 
@@ -339,7 +339,7 @@ ___
 
 *Inherited from I2cBus.readByteSync*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:161*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:161*
 
 Synchronous SMBus read byte.
 
@@ -363,7 +363,7 @@ ___
 
 *Inherited from I2cBus.readI2cBlock*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:203*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:203*
 
 Asynchronous I2C block read (not defined by the SMBus specification). Reads a block of bytes from a device, from a designated register that is specified by cmd.
 
@@ -386,7 +386,7 @@ ___
 
 ▸ **readI2cBlockAsync**(address: *`number`*, command: *`number`*, length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/types.ts:18](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L18)*
+*Defined in [lib/types.ts:18](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/types.ts#L18)*
 
 **Parameters:**
 
@@ -408,7 +408,7 @@ ___
 
 *Inherited from I2cBus.readI2cBlockSync*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:221*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:221*
 
 Synchronous I2C block read (not defined by the SMBus specification). Reads a block of bytes from a device, from a designated register that is specified by cmd.
 
@@ -434,7 +434,7 @@ ___
 
 *Inherited from I2cBus.readWord*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:173*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:173*
 
 Asynchronous SMBus read word.
 
@@ -455,7 +455,7 @@ ___
 
 ▸ **readWordAsync**(address: *`number`*, command: *`number`*): `Promise`<`number`>
 
-*Defined in [lib/types.ts:17](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L17)*
+*Defined in [lib/types.ts:17](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/types.ts#L17)*
 
 **Parameters:**
 
@@ -475,7 +475,7 @@ ___
 
 *Inherited from I2cBus.readWordSync*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:185*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:185*
 
 Synchronous SMBus read word.
 
@@ -499,7 +499,7 @@ ___
 
 *Inherited from I2cBus.receiveByte*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:231*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:231*
 
 Asynchronous SMBus receive byte.
 
@@ -519,7 +519,7 @@ ___
 
 ▸ **receiveByteAsync**(address: *`number`*): `Promise`<`number`>
 
-*Defined in [lib/types.ts:13](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L13)*
+*Defined in [lib/types.ts:13](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/types.ts#L13)*
 
 **Parameters:**
 
@@ -538,7 +538,7 @@ ___
 
 *Inherited from I2cBus.receiveByteSync*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:241*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:241*
 
 Synchronous SMBus receive byte.
 
@@ -561,7 +561,7 @@ ___
 
 *Inherited from I2cBus.scan*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:73*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:73*
 
 Scans the I2C bus asynchronously for devices the same way `i2cdetect -y -r` would.
 
@@ -580,7 +580,7 @@ ___
 
 ▸ **scanAsync**(): `Promise`<`number`[]>
 
-*Defined in [lib/types.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L8)*
+*Defined in [lib/types.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/types.ts#L8)*
 
 **Returns:** `Promise`<`number`[]>
 
@@ -593,7 +593,7 @@ ___
 
 *Inherited from I2cBus.scanSync*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:81*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:81*
 
 Scans the I2C bus synchronously for devices the same way `i2cdetect -y -r` would.
 
@@ -610,7 +610,7 @@ ___
 
 *Inherited from I2cBus.sendByte*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:253*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:253*
 
 Asynchronous SMBus send byte.
 
@@ -631,7 +631,7 @@ ___
 
 ▸ **sendByteAsync**(address: *`number`*, byte: *`number`*): `Promise`<`void`>
 
-*Defined in [lib/types.ts:14](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L14)*
+*Defined in [lib/types.ts:14](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/types.ts#L14)*
 
 **Parameters:**
 
@@ -651,7 +651,7 @@ ___
 
 *Inherited from I2cBus.sendByteSync*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:263*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:263*
 
 Synchronous SMBus send byte.
 
@@ -673,7 +673,7 @@ ___
 
 *Inherited from I2cBus.writeByte*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:277*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:277*
 
 Asynchronous SMBus write byte.
 
@@ -695,7 +695,7 @@ ___
 
 ▸ **writeByteAsync**(address: *`number`*, command: *`number`*, byte: *`number`*): `Promise`<`void`>
 
-*Defined in [lib/types.ts:20](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L20)*
+*Defined in [lib/types.ts:20](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/types.ts#L20)*
 
 **Parameters:**
 
@@ -716,7 +716,7 @@ ___
 
 *Inherited from I2cBus.writeByteSync*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:289*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:289*
 
 Synchronous SMBus write byte.
 
@@ -739,7 +739,7 @@ ___
 
 *Inherited from I2cBus.writeI2cBlock*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:359*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:359*
 
 Asynchronous I2C block write (not defined by the SMBus specification). Writes a block of bytes to a device, to a designated register that is specified by {command}.
 
@@ -762,7 +762,7 @@ ___
 
 ▸ **writeI2cBlockAsync**(address: *`number`*, command: *`number`*, length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/types.ts:22](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L22)*
+*Defined in [lib/types.ts:22](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/types.ts#L22)*
 
 **Parameters:**
 
@@ -784,7 +784,7 @@ ___
 
 *Inherited from I2cBus.writeI2cBlockSync*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:377*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:377*
 
 Synchronous I2C block write (not defined by the SMBus specification). Writes a block of bytes to a device, to a designated register that is specified by {command}.
 
@@ -810,7 +810,7 @@ ___
 
 *Inherited from I2cBus.writeQuick*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:329*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:329*
 
 Asynchronous SMBus quick command. Writes a single bit to the device.
 
@@ -834,7 +834,7 @@ ___
 
 *Inherited from I2cBus.writeQuickSync*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:341*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:341*
 
 Synchronous SMBus quick command. Writes a single bit to the device.
 
@@ -857,7 +857,7 @@ ___
 
 *Inherited from I2cBus.writeWord*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:303*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:303*
 
 Asynchronous SMBus write word.
 
@@ -879,7 +879,7 @@ ___
 
 ▸ **writeWordAsync**(address: *`number`*, command: *`number`*, word: *`number`*): `Promise`<`void`>
 
-*Defined in [lib/types.ts:21](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L21)*
+*Defined in [lib/types.ts:21](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/types.ts#L21)*
 
 **Parameters:**
 
@@ -900,7 +900,7 @@ ___
 
 *Inherited from I2cBus.writeWordSync*
 
-*Defined in /Users/alejandro/projects/envirophat.js/i2cBus.js/node_modules/@types/i2c-bus/index.d.ts:315*
+*Defined in /home/circleci/async-i2c-bus/node_modules/@types/i2c-bus/index.d.ts:315*
 
 Synchronous SMBus write word.
 

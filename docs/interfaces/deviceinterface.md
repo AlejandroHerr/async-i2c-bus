@@ -36,7 +36,7 @@
 
 **● address**: *`number`*
 
-*Defined in [lib/DeviceInterface.ts:4](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/DeviceInterface.ts#L4)*
+*Defined in [lib/DeviceInterface.ts:4](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/DeviceInterface.ts#L4)*
 
 ___
 <a id="bus"></a>
@@ -45,7 +45,7 @@ ___
 
 **● bus**: *[BusInterface](businterface.md)*
 
-*Defined in [lib/DeviceInterface.ts:5](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/DeviceInterface.ts#L5)*
+*Defined in [lib/DeviceInterface.ts:5](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/DeviceInterface.ts#L5)*
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 ▸ **i2cRead**(length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/DeviceInterface.ts:7](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/DeviceInterface.ts#L7)*
+*Defined in [lib/DeviceInterface.ts:7](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/DeviceInterface.ts#L7)*
 
 **Parameters:**
 
@@ -75,7 +75,7 @@ ___
 
 ▸ **i2cWrite**(length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/DeviceInterface.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/DeviceInterface.ts#L8)*
+*Defined in [lib/DeviceInterface.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/DeviceInterface.ts#L8)*
 
 **Parameters:**
 
@@ -93,7 +93,7 @@ ___
 
 ▸ **readByte**(command: *`number`*): `Promise`<`number`>
 
-*Defined in [lib/DeviceInterface.ts:13](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/DeviceInterface.ts#L13)*
+*Defined in [lib/DeviceInterface.ts:13](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/DeviceInterface.ts#L13)*
 
 **Parameters:**
 
@@ -110,7 +110,7 @@ ___
 
 ▸ **readI2cBlock**(command: *`number`*, length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/DeviceInterface.ts:14](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/DeviceInterface.ts#L14)*
+*Defined in [lib/DeviceInterface.ts:14](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/DeviceInterface.ts#L14)*
 
 **Parameters:**
 
@@ -129,7 +129,7 @@ ___
 
 ▸ **readWord**(command: *`number`*): `Promise`<`number`>
 
-*Defined in [lib/DeviceInterface.ts:15](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/DeviceInterface.ts#L15)*
+*Defined in [lib/DeviceInterface.ts:15](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/DeviceInterface.ts#L15)*
 
 **Parameters:**
 
@@ -146,7 +146,7 @@ ___
 
 ▸ **receiveByte**(): `Promise`<`number`>
 
-*Defined in [lib/DeviceInterface.ts:10](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/DeviceInterface.ts#L10)*
+*Defined in [lib/DeviceInterface.ts:10](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/DeviceInterface.ts#L10)*
 
 **Returns:** `Promise`<`number`>
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **sendByte**(byte: *`number`*): `Promise`<`void`>
 
-*Defined in [lib/DeviceInterface.ts:11](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/DeviceInterface.ts#L11)*
+*Defined in [lib/DeviceInterface.ts:11](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/DeviceInterface.ts#L11)*
 
 **Parameters:**
 
@@ -174,7 +174,7 @@ ___
 
 ▸ **writeByte**(command: *`number`*, byte: *`number`*): `Promise`<`void`>
 
-*Defined in [lib/DeviceInterface.ts:17](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/DeviceInterface.ts#L17)*
+*Defined in [lib/DeviceInterface.ts:17](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/DeviceInterface.ts#L17)*
 
 **Parameters:**
 
@@ -192,7 +192,7 @@ ___
 
 ▸ **writeI2cBlock**(command: *`number`*, length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/DeviceInterface.ts:19](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/DeviceInterface.ts#L19)*
+*Defined in [lib/DeviceInterface.ts:19](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/DeviceInterface.ts#L19)*
 
 **Parameters:**
 
@@ -211,7 +211,7 @@ ___
 
 ▸ **writeWord**(command: *`number`*, word: *`number`*): `Promise`<`void`>
 
-*Defined in [lib/DeviceInterface.ts:18](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/DeviceInterface.ts#L18)*
+*Defined in [lib/DeviceInterface.ts:18](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/DeviceInterface.ts#L18)*
 
 **Parameters:**
 
