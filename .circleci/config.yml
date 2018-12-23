@@ -60,7 +60,7 @@ jobs:
           at: ~/async-i2c-bus
       - run:
           name: add_gh_ssh_keys
-          command: ssh-keyscan github.com >> ~/.ssh/known_hosts
+          command: mkdir ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
       - run:
           name: Release
           command: yarn release
