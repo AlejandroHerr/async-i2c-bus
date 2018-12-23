@@ -33,7 +33,7 @@
 
 ⊕ **new DeviceError**(message: *`string`*, busNumber: *`number`*, deviceAddress: *`number`*): [DeviceError](deviceerror.md)
 
-*Defined in [lib/DeviceError.ts:3](https://github.com/AlejandroHerr/async-i2c-bus/blob/b85c364/src/lib/DeviceError.ts#L3)*
+*Defined in [lib/DeviceError.ts:3](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/DeviceError.ts#L3)*
 
 **Parameters:**
 
@@ -55,7 +55,7 @@ ___
 
 **● busNumber**: *`number`*
 
-*Defined in [lib/DeviceError.ts:2](https://github.com/AlejandroHerr/async-i2c-bus/blob/b85c364/src/lib/DeviceError.ts#L2)*
+*Defined in [lib/DeviceError.ts:2](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/DeviceError.ts#L2)*
 
 ___
 <a id="deviceaddress"></a>
@@ -64,7 +64,7 @@ ___
 
 **● deviceAddress**: *`number`*
 
-*Defined in [lib/DeviceError.ts:3](https://github.com/AlejandroHerr/async-i2c-bus/blob/b85c364/src/lib/DeviceError.ts#L3)*
+*Defined in [lib/DeviceError.ts:3](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/DeviceError.ts#L3)*
 
 ___
 <a id="message"></a>
