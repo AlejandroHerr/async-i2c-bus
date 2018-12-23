@@ -27,13 +27,15 @@ And you're ready to go.
 The package requires node `v8.10.x` or higher.
 If you need a compatibility with lower versions of node, you can build it. To do so clone the repo in your workspace, and modify the `target` options in the `tsconfig.json`, e.g:
 
-```json
+```js
 {
   "compilerOptions": {
     "target": "es5", // <-- Line changed
     "outDir": "dist/main",
     "rootDir": "src",
     // ..
+  }
+}
 ```
 
 And build the module with `yarn build` or `npm run build`.
