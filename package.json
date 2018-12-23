@@ -33,7 +33,7 @@
     "lint": "run-s -c lint:*",
     "lint:prettier": "prettier \"src/**/*.ts\" --list-different",
     "lint:tslint": "tslint --project .",
-    "release": "run-s release:semantic",
+    "release": "run-s release:prepare release:semantic",
     "release:prepare": "run-s doc:html doc:publish",
     "release:semantic": "semantic-release || true",
     "test": "jest",

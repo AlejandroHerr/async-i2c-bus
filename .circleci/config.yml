@@ -60,7 +60,10 @@ jobs:
           at: ~/async-i2c-bus
       - add_ssh_keys:
           fingerprints:
-            - 'e9:08:d8:07:49:0c:11:11:1e:a7:1d:32:a6:ed:97:62'
+            - '16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48'
+            - 'ad:1c:08:a4:40:e3:6f:9c:f5:66:26:5d:4b:33:5d:8c'
+            - 'SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8'
+            - 'SHA256:br9IjFspm1vxR3iA35FWE+4VTyz1hYVLIE2t1/CeyWQ'
       - run:
           name: Release
           command: yarn release
