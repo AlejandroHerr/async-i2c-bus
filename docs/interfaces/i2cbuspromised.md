@@ -85,7 +85,7 @@ ___
 
 ▸ **closeAsync**(): `Promise`<`void`>
 
-*Defined in [lib/types.ts:5](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/types.ts#L5)*
+*Defined in [lib/types.ts:5](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L5)*
 
 **Returns:** `Promise`<`void`>
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **i2cFuncsAsync**(): `Promise`<`I2cBusFuncs`>
 
-*Defined in [lib/types.ts:7](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/types.ts#L7)*
+*Defined in [lib/types.ts:7](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L7)*
 
 **Returns:** `Promise`<`I2cBusFuncs`>
 
@@ -184,7 +184,7 @@ ___
 
 ▸ **i2cReadAsync**(address: *`number`*, length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/types.ts:10](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/types.ts#L10)*
+*Defined in [lib/types.ts:10](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L10)*
 
 **Parameters:**
 
@@ -252,7 +252,7 @@ ___
 
 ▸ **i2cWriteAsync**(address: *`number`*, length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/types.ts:11](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/types.ts#L11)*
+*Defined in [lib/types.ts:11](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L11)*
 
 **Parameters:**
 
@@ -319,7 +319,7 @@ ___
 
 ▸ **readByteAsync**(address: *`number`*, command: *`number`*): `Promise`<`number`>
 
-*Defined in [lib/types.ts:16](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/types.ts#L16)*
+*Defined in [lib/types.ts:16](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L16)*
 
 **Parameters:**
 
@@ -386,7 +386,7 @@ ___
 
 ▸ **readI2cBlockAsync**(address: *`number`*, command: *`number`*, length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/types.ts:18](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/types.ts#L18)*
+*Defined in [lib/types.ts:18](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L18)*
 
 **Parameters:**
 
@@ -455,7 +455,7 @@ ___
 
 ▸ **readWordAsync**(address: *`number`*, command: *`number`*): `Promise`<`number`>
 
-*Defined in [lib/types.ts:17](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/types.ts#L17)*
+*Defined in [lib/types.ts:17](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L17)*
 
 **Parameters:**
 
@@ -519,7 +519,7 @@ ___
 
 ▸ **receiveByteAsync**(address: *`number`*): `Promise`<`number`>
 
-*Defined in [lib/types.ts:13](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/types.ts#L13)*
+*Defined in [lib/types.ts:13](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L13)*
 
 **Parameters:**
 
@@ -580,7 +580,7 @@ ___
 
 ▸ **scanAsync**(): `Promise`<`number`[]>
 
-*Defined in [lib/types.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/types.ts#L8)*
+*Defined in [lib/types.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L8)*
 
 **Returns:** `Promise`<`number`[]>
 
@@ -631,7 +631,7 @@ ___
 
 ▸ **sendByteAsync**(address: *`number`*, byte: *`number`*): `Promise`<`void`>
 
-*Defined in [lib/types.ts:14](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/types.ts#L14)*
+*Defined in [lib/types.ts:14](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L14)*
 
 **Parameters:**
 
@@ -695,7 +695,7 @@ ___
 
 ▸ **writeByteAsync**(address: *`number`*, command: *`number`*, byte: *`number`*): `Promise`<`void`>
 
-*Defined in [lib/types.ts:20](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/types.ts#L20)*
+*Defined in [lib/types.ts:20](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L20)*
 
 **Parameters:**
 
@@ -762,7 +762,7 @@ ___
 
 ▸ **writeI2cBlockAsync**(address: *`number`*, command: *`number`*, length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/types.ts:22](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/types.ts#L22)*
+*Defined in [lib/types.ts:22](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L22)*
 
 **Parameters:**
 
@@ -879,7 +879,7 @@ ___
 
 ▸ **writeWordAsync**(address: *`number`*, command: *`number`*, word: *`number`*): `Promise`<`void`>
 
-*Defined in [lib/types.ts:21](https://github.com/AlejandroHerr/async-i2c-bus/blob/93ea53e/src/lib/types.ts#L21)*
+*Defined in [lib/types.ts:21](https://github.com/AlejandroHerr/async-i2c-bus/blob/1ac1ab7/src/lib/types.ts#L21)*
 
 **Parameters:**
 
