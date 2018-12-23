@@ -59,8 +59,14 @@ jobs:
       - attach_workspace:
           at: ~/async-i2c-bus
       - run:
-          name: add_gh_ssh_keys
+          name: Add github ssh keys
           command: mkdir ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
+      - run:
+          name: Configure git email
+          command: git config --global user.email $GH_EMAIL
+      - run:
+          name: Configure git name
+          command: git config --global user.name $GH_NAME
       - run:
           name: Release
           command: yarn release
