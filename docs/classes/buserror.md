@@ -32,7 +32,7 @@
 
 ⊕ **new BusError**(message: *`string`*, busNumber: *`number`*): [BusError](buserror.md)
 
-*Defined in [lib/BusError.ts:2](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/BusError.ts#L2)*
+*Defined in [lib/BusError.ts:2](https://github.com/AlejandroHerr/async-i2c-bus/blob/237c84b/src/lib/BusError.ts#L2)*
 
 **Parameters:**
 
@@ -53,7 +53,7 @@ ___
 
 **● busNumber**: *`number`*
 
-*Defined in [lib/BusError.ts:2](https://github.com/AlejandroHerr/async-i2c-bus/blob/6b78d99/src/lib/BusError.ts#L2)*
+*Defined in [lib/BusError.ts:2](https://github.com/AlejandroHerr/async-i2c-bus/blob/237c84b/src/lib/BusError.ts#L2)*
 
 ___
 <a id="message"></a>
