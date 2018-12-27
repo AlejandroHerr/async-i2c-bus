@@ -1,11 +1,10 @@
-import DeviceError from './DeviceError';
+import BusError from './BusError';
 
-describe('DeviceError', () => {
-  it('should instantiate error with bus number, address and message', () => {
-    const error = new DeviceError('Test error', 2, 0x55);
+describe('BusError', () => {
+  it('should instantiate error with bus number and message', () => {
+    const error = new BusError('Test error', 2);
 
     expect(error.message).toBe('Test error');
     expect(error.busNumber).toBe(2);
-    expect(error.deviceAddress).toBe(0x55);
   });
 });
