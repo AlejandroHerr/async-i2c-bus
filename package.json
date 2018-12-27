@@ -29,8 +29,6 @@
     "docs:html": "typedoc src/ --exclude **/*.spec.ts --target ES6 --mode file --out dist/docs",
     "docs:docs": "node ./scripts/commitDocs || true",
     "docs:gh-pages": "gh-pages -m \"docs(gh-pages) Update docs [ci skip]\" -d dist/docs || true",
-    "docs:generate": "run-p docs:md docs:html",
-    "docs:publish": "run-p docs:docs docs:gh-pages",
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"src/**/*.ts\" --write",
     "fix:tslint": "tslint --fix --project .",
@@ -38,7 +36,7 @@
     "lint:prettier": "prettier \"src/**/*.ts\" --list-different",
     "lint:tslint": "tslint --project .",
     "release": "run-s release:prepare release:semantic",
-    "release:prepare": "run-s docs:generate docs:publish",
+    "release:prepare": "run-s docs:docs docs:gh-pages",
     "release:semantic": "semantic-release || true",
     "test": "jest",
     "test:watch": "jest --watch"
