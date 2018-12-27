@@ -16,6 +16,7 @@
   "typings": "dist/main/index.d.ts",
   "module": "dist/module/index.js",
   "repository": "git@github.com:AlejandroHerr/async-i2c-bus.js.git",
+  "homepage": "https://alejandroherr.github.io/async-i2c-bus/",
   "author": "Alejandro Hernández Cobo <hola@alejandroherr.io>",
   "license": "MIT",
   "scripts": {
