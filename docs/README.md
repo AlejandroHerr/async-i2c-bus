@@ -195,7 +195,7 @@ describe('Device', () => {
 
 ▸ **Bus**(__namedParameters?: *`object`*): [BusInterface](interfaces/businterface.md)
 
-*Defined in [lib/Bus.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/Bus.ts#L8)*
+*Defined in [lib/Bus.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/Bus.ts#L8)*
 
 **Parameters:**
 
@@ -215,7 +215,7 @@ ___
 
 ▸ **Device**(__namedParameters: *`object`*): [DeviceInterface](interfaces/deviceinterface.md)
 
-*Defined in [lib/Device.ts:4](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/Device.ts#L4)*
+*Defined in [lib/Device.ts:4](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/Device.ts#L4)*
 
 **Parameters:**
 
@@ -235,7 +235,7 @@ ___
 
 ▸ **createI2cBusMock**(__namedParameters?: *`object`*): `open`
 
-*Defined in [lib/createI2cBusMock.ts:24](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L24)*
+*Defined in [lib/createI2cBusMock.ts:24](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L24)*
 
 **Parameters:**
 
@@ -258,7 +258,7 @@ ___
 
 **defaultI2cBusFuncs**: *`object`*
 
-*Defined in [lib/createI2cBusMock.ts:3](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L3)*
+*Defined in [lib/createI2cBusMock.ts:3](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L3)*
 
 <a id="defaulti2cbusfuncs.i2c"></a>
 
@@ -266,7 +266,7 @@ ___
 
 **● i2c**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:4](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L4)*
+*Defined in [lib/createI2cBusMock.ts:4](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L4)*
 
 ___
 <a id="defaulti2cbusfuncs.protocolmangling"></a>
@@ -275,7 +275,7 @@ ___
 
 **● protocolMangling**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:6](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L6)*
+*Defined in [lib/createI2cBusMock.ts:6](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L6)*
 
 ___
 <a id="defaulti2cbusfuncs.smbusblockproccall"></a>
@@ -284,7 +284,7 @@ ___
 
 **● smbusBlockProcCall**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L8)*
+*Defined in [lib/createI2cBusMock.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L8)*
 
 ___
 <a id="defaulti2cbusfuncs.smbuspec"></a>
@@ -293,7 +293,7 @@ ___
 
 **● smbusPec**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:7](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L7)*
+*Defined in [lib/createI2cBusMock.ts:7](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L7)*
 
 ___
 <a id="defaulti2cbusfuncs.smbusproccall"></a>
@@ -302,7 +302,7 @@ ___
 
 **● smbusProcCall**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:16](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L16)*
+*Defined in [lib/createI2cBusMock.ts:16](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L16)*
 
 ___
 <a id="defaulti2cbusfuncs.smbusquick"></a>
@@ -311,7 +311,7 @@ ___
 
 **● smbusQuick**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:9](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L9)*
+*Defined in [lib/createI2cBusMock.ts:9](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L9)*
 
 ___
 <a id="defaulti2cbusfuncs.smbusreadblock"></a>
@@ -320,7 +320,7 @@ ___
 
 **● smbusReadBlock**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:17](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L17)*
+*Defined in [lib/createI2cBusMock.ts:17](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L17)*
 
 ___
 <a id="defaulti2cbusfuncs.smbusreadbyte"></a>
@@ -329,7 +329,7 @@ ___
 
 **● smbusReadByte**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:12](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L12)*
+*Defined in [lib/createI2cBusMock.ts:12](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L12)*
 
 ___
 <a id="defaulti2cbusfuncs.smbusreadi2cblock"></a>
@@ -338,7 +338,7 @@ ___
 
 **● smbusReadI2cBlock**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:19](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L19)*
+*Defined in [lib/createI2cBusMock.ts:19](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L19)*
 
 ___
 <a id="defaulti2cbusfuncs.smbusreadword"></a>
@@ -347,7 +347,7 @@ ___
 
 **● smbusReadWord**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:14](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L14)*
+*Defined in [lib/createI2cBusMock.ts:14](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L14)*
 
 ___
 <a id="defaulti2cbusfuncs.smbusreceivebyte"></a>
@@ -356,7 +356,7 @@ ___
 
 **● smbusReceiveByte**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:10](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L10)*
+*Defined in [lib/createI2cBusMock.ts:10](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L10)*
 
 ___
 <a id="defaulti2cbusfuncs.smbussendbyte"></a>
@@ -365,7 +365,7 @@ ___
 
 **● smbusSendByte**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:11](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L11)*
+*Defined in [lib/createI2cBusMock.ts:11](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L11)*
 
 ___
 <a id="defaulti2cbusfuncs.smbuswriteblock"></a>
@@ -374,7 +374,7 @@ ___
 
 **● smbusWriteBlock**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:18](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L18)*
+*Defined in [lib/createI2cBusMock.ts:18](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L18)*
 
 ___
 <a id="defaulti2cbusfuncs.smbuswritebyte"></a>
@@ -383,7 +383,7 @@ ___
 
 **● smbusWriteByte**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:13](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L13)*
+*Defined in [lib/createI2cBusMock.ts:13](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L13)*
 
 ___
 <a id="defaulti2cbusfuncs.smbuswritei2cblock"></a>
@@ -392,7 +392,7 @@ ___
 
 **● smbusWriteI2cBlock**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:20](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L20)*
+*Defined in [lib/createI2cBusMock.ts:20](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L20)*
 
 ___
 <a id="defaulti2cbusfuncs.smbuswriteword"></a>
@@ -401,7 +401,7 @@ ___
 
 **● smbusWriteWord**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:15](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L15)*
+*Defined in [lib/createI2cBusMock.ts:15](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L15)*
 
 ___
 <a id="defaulti2cbusfuncs.tenbitaddr"></a>
@@ -410,7 +410,7 @@ ___
 
 **● tenBitAddr**: *`boolean`* = false
 
-*Defined in [lib/createI2cBusMock.ts:5](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/createI2cBusMock.ts#L5)*
+*Defined in [lib/createI2cBusMock.ts:5](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/createI2cBusMock.ts#L5)*
 
 ___
 

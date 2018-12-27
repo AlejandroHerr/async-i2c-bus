@@ -41,7 +41,7 @@
 
 **● busNumber**: *`number`*
 
-*Defined in [lib/BusInterface.ts:6](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L6)*
+*Defined in [lib/BusInterface.ts:6](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L6)*
 
 ___
 <a id="i2cbus"></a>
@@ -51,7 +51,7 @@ ___
 **● i2cBus**: * [I2cBusPromised](i2cbuspromised.md) &#124; `null`
 *
 
-*Defined in [lib/BusInterface.ts:7](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L7)*
+*Defined in [lib/BusInterface.ts:7](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L7)*
 
 ___
 <a id="isopen"></a>
@@ -60,7 +60,7 @@ ___
 
 **● isOpen**: *`boolean`*
 
-*Defined in [lib/BusInterface.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L8)*
+*Defined in [lib/BusInterface.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L8)*
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 ▸ **close**(): `Promise`<[BusInterface](businterface.md)>
 
-*Defined in [lib/BusInterface.ts:11](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L11)*
+*Defined in [lib/BusInterface.ts:11](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L11)*
 
 **Returns:** `Promise`<[BusInterface](businterface.md)>
 
@@ -83,7 +83,7 @@ ___
 
 ▸ **i2cFuncs**(): `Promise`<`I2cBusFuncs`>
 
-*Defined in [lib/BusInterface.ts:13](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L13)*
+*Defined in [lib/BusInterface.ts:13](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L13)*
 
 **Returns:** `Promise`<`I2cBusFuncs`>
 
@@ -94,7 +94,7 @@ ___
 
 ▸ **i2cRead**(address: *`number`*, length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/BusInterface.ts:16](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L16)*
+*Defined in [lib/BusInterface.ts:16](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L16)*
 
 **Parameters:**
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **i2cWrite**(address: *`number`*, length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/BusInterface.ts:17](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L17)*
+*Defined in [lib/BusInterface.ts:17](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L17)*
 
 **Parameters:**
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **open**(): `Promise`<[BusInterface](businterface.md)>
 
-*Defined in [lib/BusInterface.ts:10](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L10)*
+*Defined in [lib/BusInterface.ts:10](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L10)*
 
 **Returns:** `Promise`<[BusInterface](businterface.md)>
 
@@ -143,7 +143,7 @@ ___
 
 ▸ **readByte**(address: *`number`*, command: *`number`*): `Promise`<`number`>
 
-*Defined in [lib/BusInterface.ts:22](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L22)*
+*Defined in [lib/BusInterface.ts:22](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L22)*
 
 **Parameters:**
 
@@ -161,7 +161,7 @@ ___
 
 ▸ **readI2cBlock**(address: *`number`*, command: *`number`*, length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/BusInterface.ts:23](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L23)*
+*Defined in [lib/BusInterface.ts:23](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L23)*
 
 **Parameters:**
 
@@ -181,7 +181,7 @@ ___
 
 ▸ **readWord**(address: *`number`*, command: *`number`*): `Promise`<`number`>
 
-*Defined in [lib/BusInterface.ts:24](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L24)*
+*Defined in [lib/BusInterface.ts:24](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L24)*
 
 **Parameters:**
 
@@ -199,7 +199,7 @@ ___
 
 ▸ **receiveByte**(address: *`number`*): `Promise`<`number`>
 
-*Defined in [lib/BusInterface.ts:19](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L19)*
+*Defined in [lib/BusInterface.ts:19](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L19)*
 
 **Parameters:**
 
@@ -216,7 +216,7 @@ ___
 
 ▸ **scan**(): `Promise`<`number`[]>
 
-*Defined in [lib/BusInterface.ts:14](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L14)*
+*Defined in [lib/BusInterface.ts:14](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L14)*
 
 **Returns:** `Promise`<`number`[]>
 
@@ -227,7 +227,7 @@ ___
 
 ▸ **sendByte**(address: *`number`*, byte: *`number`*): `Promise`<`void`>
 
-*Defined in [lib/BusInterface.ts:20](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L20)*
+*Defined in [lib/BusInterface.ts:20](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L20)*
 
 **Parameters:**
 
@@ -245,7 +245,7 @@ ___
 
 ▸ **writeByte**(address: *`number`*, command: *`number`*, byte: *`number`*): `Promise`<`void`>
 
-*Defined in [lib/BusInterface.ts:26](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L26)*
+*Defined in [lib/BusInterface.ts:26](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L26)*
 
 **Parameters:**
 
@@ -264,7 +264,7 @@ ___
 
 ▸ **writeI2cBlock**(address: *`number`*, command: *`number`*, length: *`number`*, buffer: *`Buffer`*): `Promise`<`number`>
 
-*Defined in [lib/BusInterface.ts:28](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L28)*
+*Defined in [lib/BusInterface.ts:28](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L28)*
 
 **Parameters:**
 
@@ -284,7 +284,7 @@ ___
 
 ▸ **writeWord**(address: *`number`*, command: *`number`*, word: *`number`*): `Promise`<`void`>
 
-*Defined in [lib/BusInterface.ts:27](https://github.com/AlejandroHerr/async-i2c-bus/blob/d8a1788/src/lib/BusInterface.ts#L27)*
+*Defined in [lib/BusInterface.ts:27](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusInterface.ts#L27)*
 
 **Parameters:**
 
