@@ -77,11 +77,17 @@ workflows:
       - lint:
           requires:
             - checkout
-      - release:
+      - docs:
           requires:
             - build
             - test
             - lint
+          filters:
+            branches:
+              only: master
+      - release:
+          requires:
+            - docs
           filters:
             branches:
               only: master
