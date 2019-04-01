@@ -45,9 +45,11 @@ jobs:
       - run:
           name: Lint
           command: 'yarn lint'
-  release:
+  docs:
     <<: *defaults
     steps:
+      - attach_workspace:
+          at: ~/async-i2c-bus
       - attach_workspace:
           at: ~/async-i2c-bus
       - run:
@@ -59,6 +61,15 @@ jobs:
       - run:
           name: Configure git name
           command: git config --global user.name $GH_NAME
+      - run:
+          name: Generate md and html docs
+          command: yarn docs
+      - persist_to_workspace:
+          root: .
+          paths: .s
+  release:
+    <<: *defaults
+    steps:
       - run:
           name: Release
           command: yarn release
