@@ -1,17 +1,29 @@
 version: 2
 
-defaults: &defaults
-  working_directory: ~/async-i2c-bus
-  docker:
-    - image: 'circleci/node:dubnium-stretch'
+aliases:
+  - &defaults
+    working_directory: ~/async-i2c-bus
+    docker:
+      - image: 'circleci/node:dubnium-stretch'
+  - &step_attach_workspace
+    attach_workspace:
+      at: ~/async-i2c-bus
+  - &add_ssh_keys
+    name: Add github ssh keys
+    command: mkdir ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
+  - &git_config_email
+    name: Configure git email
+    command: git config --global user.email $GH_EMAIL
+  - &git_config_name
+    name: Configure git name
+    command: git config --global user.name $GH_NAME
 
 jobs:
   checkout:
     <<: *defaults
     steps:
       - checkout
-      - attach_workspace:
-          at: ~/async-i2c-bus
+      - *step_attach_workspace
       - run:
           name: 'Install Dependencies'
           command: 'yarn install'
@@ -21,8 +33,7 @@ jobs:
   build:
     <<: *defaults
     steps:
-      - attach_workspace:
-          at: ~/async-i2c-bus
+      - *step_attach_workspace
       - run:
           name: build
           command: 'yarn build'
@@ -32,44 +43,34 @@ jobs:
   test:
     <<: *defaults
     steps:
-      - attach_workspace:
-          at: ~/async-i2c-bus
+      - *step_attach_workspace
       - run:
           name: Test
           command: 'yarn test'
   lint:
     <<: *defaults
     steps:
-      - attach_workspace:
-          at: ~/async-i2c-bus
+      - *step_attach_workspace
       - run:
           name: Lint
           command: 'yarn lint'
   docs:
     <<: *defaults
     steps:
-      - attach_workspace:
-          at: ~/async-i2c-bus
-      - run:
-          name: Add github ssh keys
-          command: mkdir ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
-      - run:
-          name: Configure git email
-          command: git config --global user.email $GH_EMAIL
-      - run:
-          name: Configure git name
-          command: git config --global user.name $GH_NAME
-      - run:
-          name: Generate md and html docs
-          command: yarn docs
+      - *step_attach_workspace
+      - run: *add_ssh_keys
+      - run: *git_config_email
+      - run: *git_config_name
       - persist_to_workspace:
           root: .
           paths: .
   release:
     <<: *defaults
     steps:
-      - attach_workspace:
-          at: ~/async-i2c-bus
+      - *step_attach_workspace
+      - run: *add_ssh_keys
+      - run: *git_config_email
+      - run: *git_config_name
       - run:
           name: Release
           command: yarn release
