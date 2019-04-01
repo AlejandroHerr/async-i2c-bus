@@ -68,6 +68,8 @@ jobs:
   release:
     <<: *defaults
     steps:
+      - attach_workspace:
+          at: ~/async-i2c-bus
       - run:
           name: Release
           command: yarn release
