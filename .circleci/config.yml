@@ -66,7 +66,7 @@ jobs:
           command: yarn docs
       - persist_to_workspace:
           root: .
-          paths: .s
+          paths: .
   release:
     <<: *defaults
     steps:
