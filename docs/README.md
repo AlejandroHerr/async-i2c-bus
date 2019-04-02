@@ -62,7 +62,7 @@ const Device = ({ address, bus }: { address: number; bus: BusInterface }): Devic
 
 You don't need to use a `DeviceInterface` in order to work with this library, but it helps.
 
-For more details, check the full auto-generated [documentation](https://alejandroherr.github.io/async-i2c-bus/).
+For more details, check the full auto-generated [documentation](https://async-i2c-bus.alejandroherr.io).
 
 ### Example
 
