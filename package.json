@@ -59,7 +59,7 @@
     "prettier": "1.16.4",
     "semantic-release": "15.13.3",
     "simple-git": "1.110.0",
-    "ts-jest": "24.0.1",
+    "ts-jest": "24.0.2",
     "tslint": "5.15.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-immutable": "5.5.2",
