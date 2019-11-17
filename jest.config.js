@@ -9,5 +9,4 @@ module.exports = {
     },
   },
   testMatch: ['**/src/**/?(*.)+(spec).[jt]s'],
-  setupFilesAfterEnv: ['./src/tests/matchers/index.ts'],
 };
