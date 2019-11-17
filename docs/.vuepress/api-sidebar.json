@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Classes",
+    "children": [
+      "classes/bus",
+      "classes/buserror",
+      "classes/device"
+    ]
+  }
+]

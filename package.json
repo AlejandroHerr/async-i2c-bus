@@ -28,7 +28,7 @@
     "docs": "run-s docs:clean docs:generate docs:config",
     "docs:clean": "rm -rf ./docs/.vuepress",
     "docs:config": "sh ./scripts/configureVuepress.sh",
-    "docs:generate": "typedoc ./src/index.ts",
+    "docs:generate": "typedoc ./src",
     "lint": "eslint ./src --ext ts",
     "test": "jest --watch --coverage",
     "semantic-release": "semantic-release"

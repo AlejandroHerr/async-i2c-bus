@@ -1,104 +1,79 @@
-[async-i2c-bus](../README.md) > [BusError](../classes/buserror.md)
-
 # Class: BusError
 
 ## Hierarchy
 
- `Error`
+* Error
 
-**↳ BusError**
-
-## Index
-
-### Constructors
-
-* [constructor](buserror.md#constructor)
-
-### Properties
-
-* [busNumber](buserror.md#busnumber)
-* [message](buserror.md#message)
-* [name](buserror.md#name)
-* [stack](buserror.md#stack)
-* [Error](buserror.md#error)
-
----
-
-## Constructors
-
-<a id="constructor"></a>
-
-###  constructor
-
-⊕ **new BusError**(message: *`string`*, busNumber: *`number`*): [BusError](buserror.md)
-
-*Defined in [lib/BusError.ts:2](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusError.ts#L2)*
-
-**Parameters:**
-
-| Name | Type |
-| ------ | ------ |
-| message | `string` |
-| busNumber | `number` |
-
-**Returns:** [BusError](buserror.md)
-
-___
+  ↳ **BusError**
 
 ## Properties
 
-<a id="busnumber"></a>
-
-###  busNumber
-
-**● busNumber**: *`number`*
-
-*Defined in [lib/BusError.ts:2](https://github.com/AlejandroHerr/async-i2c-bus/blob/d6f8f27/src/lib/BusError.ts#L2)*
-
-___
-<a id="message"></a>
-
 ###  message
 
-**● message**: *`string`*
+• **message**: *string*
 
-*Inherited from Error.message*
+*Inherited from void*
 
-*Defined in /home/circleci/async-i2c-bus/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:904*
+Defined in node_modules/typescript/lib/lib.es5.d.ts:974
 
 ___
-<a id="name"></a>
 
 ###  name
 
-**● name**: *`string`*
+• **name**: *string*
 
-*Inherited from Error.name*
+*Inherited from void*
 
-*Defined in /home/circleci/async-i2c-bus/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:903*
-
-___
-<a id="stack"></a>
-
-### `<Optional>` stack
-
-**● stack**: * `undefined` &#124; `string`
-*
-
-*Inherited from Error.stack*
-
-*Overrides Error.stack*
-
-*Defined in /home/circleci/async-i2c-bus/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:905*
-
-___
-<a id="error"></a>
-
-### `<Static>` Error
-
-**● Error**: *`ErrorConstructor`*
-
-*Defined in /home/circleci/async-i2c-bus/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:914*
+Defined in node_modules/typescript/lib/lib.es5.d.ts:973
 
 ___
 
+### `Optional` stack
+
+• **stack**? : *undefined | string*
+
+*Inherited from void*
+
+*Overrides void*
+
+Defined in node_modules/typescript/lib/lib.es5.d.ts:975
+
+___
+
+### `Static` Error
+
+▪ **Error**: *ErrorConstructor*
+
+Defined in node_modules/typescript/lib/lib.es5.d.ts:984
+
+## Methods
+
+### `Static` create
+
+▸ **create**(`message`: string): *[BusError](buserror.md)*
+
+*Defined in [src/lib/BusError.ts:2](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/BusError.ts#L2)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`message` | string |
+
+**Returns:** *[BusError](buserror.md)*
+
+___
+
+### `Static` createFromError
+
+▸ **createFromError**(`error`: Error): *[BusError](buserror.md)*
+
+*Defined in [src/lib/BusError.ts:15](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/BusError.ts#L15)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`error` | Error |
+
+**Returns:** *[BusError](buserror.md)*
