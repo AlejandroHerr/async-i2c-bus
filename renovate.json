@@ -1,5 +1,10 @@
 {
-  "extends": [
-    "config:base"
+  "extends": ["config:base"],
+
+  "packageRules": [
+    {
+      "extends": "monorepo:typography-js",
+      "groupName": "typography-js monorepo"
+    }
   ]
 }
