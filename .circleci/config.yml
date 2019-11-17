@@ -10,6 +10,9 @@ aliases:
   - &step_attach_workspace
     attach_workspace:
       at: *working_directory
+  - &add_ssh_keys
+    name: Add github ssh keys
+    command: mkdir ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 jobs:
   checkout:
@@ -37,6 +40,7 @@ jobs:
     <<: *defaults
     steps:
       - *step_attach_workspace
+      - run: *add_ssh_keys
       - run:
           name: release
           command: 'yarn semantic-release || true'
