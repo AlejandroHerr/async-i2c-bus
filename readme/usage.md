@@ -2,6 +2,8 @@
 
 The package exports the `Bus`, `Device` and `BusError` classes.
 
+You can check the [full documentation](https://async-i2c-bus.alejandroherr.io/)
+
 ### Bus
 
 The `Bus` wraps the original implementation with a `typescript` class.
