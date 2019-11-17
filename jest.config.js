@@ -1,4 +1,6 @@
 module.exports = {
+  coverageDirectory: './coverage/',
+  collectCoverage: true,
   preset: 'ts-jest',
   testEnvironment: 'node',
   globals: {
@@ -6,4 +8,6 @@ module.exports = {
       diagnostics: false,
     },
   },
+  testMatch: ['**/src/**/?(*.)+(spec).[jt]s'],
+  setupFilesAfterEnv: ['./src/tests/matchers/index.ts'],
 };
