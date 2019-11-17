@@ -1,13 +1,22 @@
 export default class BusError extends Error {
-  public busNumber: number;
+  static create(message: string): BusError {
+    const busError = new BusError(message);
 
-  constructor(message: string, busNumber: number) {
-    super(message);
+    if (typeof Error.captureStackTrace === 'function') {
+      // eslint-disable-next-line @typescript-eslint/unbound-method
+      Error.captureStackTrace(busError, BusError.create);
+    } else {
+      busError.stack = new Error(message).stack;
+    }
 
-    this.name = this.constructor.name;
+    return busError;
+  }
 
-    Error.captureStackTrace(this, BusError);
+  static createFromError(error: Error): BusError {
+    const busError = new BusError(error.message);
 
-    this.busNumber = busNumber;
+    busError.stack = error.stack;
+
+    return busError;
   }
 }
