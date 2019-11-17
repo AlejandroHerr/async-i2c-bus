@@ -19,6 +19,12 @@
 
 <br />
 
+Bus and Device classes for [i2c-bus](https://www.npmjs.com/package/i2c-bus), with promised functions.
+
+**You probably don't need this library anymore**. The original purpose of the library was to have `async` methods instead of callbacks. Currently `i2c-bus` support promises.
+
+**Besides that** it is still useful for me to have a class for Bus and Device, and an easy way to catch the errors produced in the bus, as well as typexcript typings. And it saves some time not having to write it for every library.
+
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/dark.png)](#table-of-contents)
 
 ## Table of Contents
@@ -49,6 +55,8 @@ npm i async-i2c-bus
 ## Usage
 
 The package exports the `Bus`, `Device` and `BusError` classes.
+
+You can check the [full documentation](https://async-i2c-bus.alejandroherr.io/)
 
 ### Bus
 
@@ -151,11 +159,3 @@ class WeatherSensor {
 ## License
 	
 Licensed under [MIT](https://opensource.org/licenses/MIT).
-
-<!-- [![Npm Package](https://img.shields.io/npm/v/homieiot.ts?style=flat-square)](https://www.npmjs.com/package/homieiot.ts)
-[![Dependencies](https://img.shields.io/david/AlejandroHerr/homieiot.ts.svg?style=flat-square)](https://david-dm.org/alejandroherr/homieiot.ts)
-[![Dev Dependencies](https://img.shields.io/david/dev/AlejandroHerr/homieiot.ts.svg?style=flat-square)](https://david-dm.org/alejandroherr/homieiot.ts?type=dev)
-[![CircleCI](https://img.shields.io/circleci/project/github/AlejandroHerr/homieiot.ts/master.svg?style=flat-square&logo=circleci)](https://circleci.com/gh/AlejandroHerr/homieiot.ts)
-[![codecov](https://codecov.io/gh/AlejandroHerr/homieiot.ts/branch/master/graph/badge.svg)](https://codecov.io/gh/AlejandroHerr/homieiot.ts)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) -->
