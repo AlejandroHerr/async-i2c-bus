@@ -10,7 +10,7 @@
 
 \+ **new Device**(`__namedParameters`: object): *[Device](device.md)*
 
-*Defined in [src/lib/Device.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/Device.ts#L8)*
+*Defined in [src/lib/Device.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/Device.ts#L8)*
 
 **Parameters:**
 
@@ -29,7 +29,7 @@ Name | Type |
 
 • **address**: *number*
 
-*Defined in [src/lib/Device.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/Device.ts#L8)*
+*Defined in [src/lib/Device.ts:8](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/Device.ts#L8)*
 
 ## Methods
 
@@ -37,7 +37,7 @@ Name | Type |
 
 ▸ **deviceId**(): *Promise‹number›*
 
-*Defined in [src/lib/Device.ts:81](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/Device.ts#L81)*
+*Defined in [src/lib/Device.ts:81](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/Device.ts#L81)*
 
 **Returns:** *Promise‹number›*
 
@@ -47,7 +47,7 @@ ___
 
 ▸ **i2cRead**(`length`: number, `buffer`: Buffer): *Promise‹I2cReadResponse›*
 
-*Defined in [src/lib/Device.ts:69](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/Device.ts#L69)*
+*Defined in [src/lib/Device.ts:69](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/Device.ts#L69)*
 
 **Parameters:**
 
@@ -64,7 +64,7 @@ ___
 
 ▸ **i2cWrite**(`length`: number, `buffer`: Buffer): *Promise‹I2cWriteResponse›*
 
-*Defined in [src/lib/Device.ts:75](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/Device.ts#L75)*
+*Defined in [src/lib/Device.ts:75](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/Device.ts#L75)*
 
 **Parameters:**
 
@@ -81,7 +81,7 @@ ___
 
 ▸ **readByte**(`command`: number): *Promise‹number›*
 
-*Defined in [src/lib/Device.ts:15](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/Device.ts#L15)*
+*Defined in [src/lib/Device.ts:15](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/Device.ts#L15)*
 
 **Parameters:**
 
@@ -97,7 +97,7 @@ ___
 
 ▸ **readI2cBlock**(`command`: number, `length`: number, `buffer`: Buffer): *Promise‹I2cReadResponse›*
 
-*Defined in [src/lib/Device.ts:27](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/Device.ts#L27)*
+*Defined in [src/lib/Device.ts:27](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/Device.ts#L27)*
 
 **Parameters:**
 
@@ -115,7 +115,7 @@ ___
 
 ▸ **readWord**(`command`: number): *Promise‹number›*
 
-*Defined in [src/lib/Device.ts:21](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/Device.ts#L21)*
+*Defined in [src/lib/Device.ts:21](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/Device.ts#L21)*
 
 **Parameters:**
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **receiveByte**(): *Promise‹number›*
 
-*Defined in [src/lib/Device.ts:33](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/Device.ts#L33)*
+*Defined in [src/lib/Device.ts:33](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/Device.ts#L33)*
 
 **Returns:** *Promise‹number›*
 
@@ -141,7 +141,7 @@ ___
 
 ▸ **sendByte**(`byte`: number): *Promise‹this›*
 
-*Defined in [src/lib/Device.ts:39](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/Device.ts#L39)*
+*Defined in [src/lib/Device.ts:39](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/Device.ts#L39)*
 
 **Parameters:**
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **writeByte**(`command`: number, `byte`: number): *Promise‹this›*
 
-*Defined in [src/lib/Device.ts:45](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/Device.ts#L45)*
+*Defined in [src/lib/Device.ts:45](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/Device.ts#L45)*
 
 **Parameters:**
 
@@ -174,7 +174,7 @@ ___
 
 ▸ **writeI2cBlock**(`command`: number, `length`: number, `buffer`: Buffer): *Promise‹I2cWriteResponse›*
 
-*Defined in [src/lib/Device.ts:63](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/Device.ts#L63)*
+*Defined in [src/lib/Device.ts:63](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/Device.ts#L63)*
 
 **Parameters:**
 
@@ -192,7 +192,7 @@ ___
 
 ▸ **writeQuick**(`bit`: 0 | 1): *Promise‹this›*
 
-*Defined in [src/lib/Device.ts:57](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/Device.ts#L57)*
+*Defined in [src/lib/Device.ts:57](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/Device.ts#L57)*
 
 **Parameters:**
 
@@ -208,7 +208,7 @@ ___
 
 ▸ **writeWord**(`command`: number, `word`: number): *Promise‹this›*
 
-*Defined in [src/lib/Device.ts:51](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/Device.ts#L51)*
+*Defined in [src/lib/Device.ts:51](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/Device.ts#L51)*
 
 **Parameters:**
 
@@ -225,7 +225,7 @@ ___
 
 ▸ **create**(`__namedParameters`: object): *[Device](device.md)*
 
-*Defined in [src/lib/Device.ts:87](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/Device.ts#L87)*
+*Defined in [src/lib/Device.ts:87](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/Device.ts#L87)*
 
 **Parameters:**
 

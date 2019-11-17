@@ -52,7 +52,7 @@ Defined in node_modules/typescript/lib/lib.es5.d.ts:984
 
 ▸ **create**(`message`: string): *[BusError](buserror.md)*
 
-*Defined in [src/lib/BusError.ts:2](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/BusError.ts#L2)*
+*Defined in [src/lib/BusError.ts:2](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/BusError.ts#L2)*
 
 **Parameters:**
 
@@ -68,7 +68,7 @@ ___
 
 ▸ **createFromError**(`error`: Error): *[BusError](buserror.md)*
 
-*Defined in [src/lib/BusError.ts:15](https://github.com/AlejandroHerr/async-i2c-bus/blob/d5954a7/src/lib/BusError.ts#L15)*
+*Defined in [src/lib/BusError.ts:15](https://github.com/AlejandroHerr/async-i2c-bus/blob/a580dec/src/lib/BusError.ts#L15)*
 
 **Parameters:**
 

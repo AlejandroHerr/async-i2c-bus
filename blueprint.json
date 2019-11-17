@@ -1,0 +1,33 @@
+{
+  "ids": {
+    "github": "AlejandroHerr/async-i2c-bus",
+    "npm": "async-i2c-bus"
+  },
+  "badges": [
+    {
+      "alt": "CircleCI",
+      "url": "https://circleci.com/gh/{{ ids.github }}",
+      "img": "https://img.shields.io/circleci/project/github/{{ ids.github }}/master.svg?style=flat-square&logo=circleci"
+    },
+    {
+      "alt": "codecov",
+      "url": "https://codecov.io/gh/{{ ids.github }}",
+      "img": "https://codecov.io/gh/{{ ids.github }}/branch/master/graph/badge.svg"
+    },
+    {
+      "alt": "Commitizen friendly",
+      "url": "http://commitizen.github.io/cz-cli/",
+      "img": "https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square"
+    },
+    {
+      "alt": "semantic-release",
+      "img": "https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square",
+      "url": "https://github.com/semantic-release/semantic-release"
+    }
+  ],
+  "line": "dark",
+  "headingPrefix": {
+    "1": "",
+    "2": ""
+  }
+}

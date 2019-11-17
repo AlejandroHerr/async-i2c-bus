@@ -25,11 +25,12 @@
     "build:module": "tsc -p tsconfig.module.json",
     "clean": "rm -rf dist",
     "commit": "git-cz",
-    "docs": "run-s docs:clean docs:generate docs:config",
+    "docs": "run-s readme:generate docs:clean docs:generate docs:config",
     "docs:clean": "rm -rf ./docs/.vuepress",
     "docs:config": "sh ./scripts/configureVuepress.sh",
     "docs:generate": "typedoc ./src",
     "lint": "eslint ./src --ext ts",
+    "readme:generate": "readme generate",
     "test": "jest --watch --coverage",
     "semantic-release": "semantic-release"
   },
@@ -39,6 +40,7 @@
     "typescript": "^3.7.2"
   },
   "devDependencies": {
+    "@appnest/readme": "^1.2.5",
     "@types/jest": "24.0.21",
     "@typescript-eslint/eslint-plugin": "2.4.0",
     "@typescript-eslint/parser": "2.4.0",
