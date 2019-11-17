@@ -40,7 +40,7 @@ describe('Bus', () => {
   });
 
   describe('close', () => {
-    it("should call i2c-bus' close functions", async () => {
+    it("should call i2c-bus' close function", async () => {
       const i2cBus = await openPromisified(1);
       const bus = await new Bus({ busNumber: 1 }).open();
 
@@ -59,7 +59,7 @@ describe('Bus', () => {
   });
 
   describe('i2cFuncs', () => {
-    it("should call i2c-bus' i2cFuncs functions", async () => {
+    it("should call i2c-bus' i2cFuncs function", async () => {
       const i2cBus = await openPromisified(1);
       const bus = await new Bus({ busNumber: 1 }).open();
 
@@ -79,7 +79,7 @@ describe('Bus', () => {
   describe('readByte', () => {
     const address = 0x1;
     const command = 0x2;
-    it("should call i2c-bus' readByte functions", async () => {
+    it("should call i2c-bus' readByte function", async () => {
       const i2cBus = await openPromisified(1);
       const bus = await new Bus({ busNumber: 1 }).open();
 
@@ -101,7 +101,7 @@ describe('Bus', () => {
   describe('readWord', () => {
     const address = 0x1;
     const command = 0x2;
-    it("should call i2c-bus' readWord functions", async () => {
+    it("should call i2c-bus' readWord function", async () => {
       const i2cBus = await openPromisified(1);
       const bus = await new Bus({ busNumber: 1 }).open();
 
@@ -125,7 +125,7 @@ describe('Bus', () => {
     const command = 0x2;
     const length = 3;
     const buffer = Buffer.alloc(0);
-    it("should call i2c-bus' readI2cBlock functions", async () => {
+    it("should call i2c-bus' readI2cBlock function", async () => {
       const i2cBus = await openPromisified(1);
       const bus = await new Bus({ busNumber: 1 }).open();
 
@@ -151,7 +151,7 @@ describe('Bus', () => {
 
   describe('receiveByte', () => {
     const address = 0x1;
-    it("should call i2c-bus' receiveByte functions", async () => {
+    it("should call i2c-bus' receiveByte function", async () => {
       const i2cBus = await openPromisified(1);
       const bus = await new Bus({ busNumber: 1 }).open();
 
@@ -173,7 +173,7 @@ describe('Bus', () => {
   describe('sendByte', () => {
     const address = 0x1;
     const byte = 0x2;
-    it("should call i2c-bus' sendByte functions", async () => {
+    it("should call i2c-bus' sendByte function", async () => {
       const i2cBus = await openPromisified(1);
       const bus = await new Bus({ busNumber: 1 }).open();
 
@@ -196,7 +196,7 @@ describe('Bus', () => {
     const address = 0x1;
     const command = 0x2;
     const byte = 0x3;
-    it("should call i2c-bus' writeByte functions", async () => {
+    it("should call i2c-bus' writeByte function", async () => {
       const i2cBus = await openPromisified(1);
       const bus = await new Bus({ busNumber: 1 }).open();
 
@@ -223,7 +223,7 @@ describe('Bus', () => {
     const address = 0x1;
     const command = 0x2;
     const word = 0x3;
-    it("should call i2c-bus' writeWord functions", async () => {
+    it("should call i2c-bus' writeWord function", async () => {
       const i2cBus = await openPromisified(1);
       const bus = await new Bus({ busNumber: 1 }).open();
 
@@ -249,7 +249,7 @@ describe('Bus', () => {
   describe('writeQuick', () => {
     const address = 0x1;
     const bit = 0x0;
-    it("should call i2c-bus' writeQuick functions", async () => {
+    it("should call i2c-bus' writeQuick function", async () => {
       const i2cBus = await openPromisified(1);
       const bus = await new Bus({ busNumber: 1 }).open();
 
@@ -273,7 +273,7 @@ describe('Bus', () => {
     const command = 0x2;
     const length = 3;
     const buffer = Buffer.alloc(0);
-    it("should call i2c-bus' writeI2cBlock functions", async () => {
+    it("should call i2c-bus' writeI2cBlock function", async () => {
       const i2cBus = await openPromisified(1);
       const bus = await new Bus({ busNumber: 1 }).open();
 
@@ -300,7 +300,7 @@ describe('Bus', () => {
     const address = 0x1;
     const length = 3;
     const buffer = Buffer.alloc(0);
-    it("should call i2c-bus' i2cRead functions", async () => {
+    it("should call i2c-bus' i2cRead function", async () => {
       const i2cBus = await openPromisified(1);
       const bus = await new Bus({ busNumber: 1 }).open();
 
@@ -327,7 +327,7 @@ describe('Bus', () => {
     const address = 0x1;
     const length = 3;
     const buffer = Buffer.alloc(0);
-    it("should call i2c-bus' i2cWrite functions", async () => {
+    it("should call i2c-bus' i2cWrite function", async () => {
       const i2cBus = await openPromisified(1);
       const bus = await new Bus({ busNumber: 1 }).open();
 
@@ -354,7 +354,7 @@ describe('Bus', () => {
   describe('scan', () => {
     const startAddress = 0x1;
     const endAddress = 0x2;
-    it("should call i2c-bus' scan functions", async () => {
+    it("should call i2c-bus' scan function", async () => {
       const i2cBus = await openPromisified(1);
       const bus = await new Bus({ busNumber: 1 }).open();
 
@@ -375,7 +375,7 @@ describe('Bus', () => {
 
   describe('deviceId', () => {
     const address = 0x1;
-    it("should call i2c-bus' deviceId functions", async () => {
+    it("should call i2c-bus' deviceId function", async () => {
       const i2cBus = await openPromisified(1);
       const bus = await new Bus({ busNumber: 1 }).open();
 
