@@ -41,7 +41,7 @@ jobs:
           name: release
           command: 'yarn semantic-release || true'
   test:
-    working_directory: *working_directory
+    <<: *defaults
     steps:
       - *step_attach_workspace
       - run:
