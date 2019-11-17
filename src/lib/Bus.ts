@@ -1,140 +1,226 @@
-import { promisifyAll } from 'bluebird';
-import { open as openI2cBus } from 'i2c-bus';
+import { openPromisified, PromisifiedBus, I2cFuncs, I2cReadResponse, I2cWriteResponse } from 'i2c-bus';
 
 import BusError from './BusError';
-import BusInterface from './BusInterface';
-import { I2cBusPromised } from './types';
 
-const Bus = ({ busNumber = 1, openBus = openI2cBus } = {}): BusInterface => {
-  let i2cBus: I2cBusPromised | null = null;
-  let isOpen: boolean = false;
+export default class Bus {
+  private i2cBus!: PromisifiedBus;
 
-  return {
-    get busNumber() {
-      return busNumber;
-    },
-    get i2cBus() {
-      return i2cBus;
-    },
-    get isOpen() {
-      return isOpen;
-    },
+  readonly busNumber: number;
 
-    open() {
-      return new Promise((resolve, reject) => {
-        i2cBus = promisifyAll<I2cBusPromised>(openBus(this.busNumber, (error: Error) => {
-          if (error) {
-            reject(`Error opening i2c bus: ${error.message}`);
-          }
+  isOpen = false;
 
-          isOpen = true;
+  constructor({ busNumber }: { busNumber: number }) {
+    this.busNumber = busNumber;
+  }
 
-          resolve(this);
-        }) as I2cBusPromised);
-      });
-    },
-    async close() {
-      if (!i2cBus || !isOpen) {
-        throw new BusError('Bus is not open', busNumber);
+  private guardAgainstClosedBus(): void {
+    if (!this.isOpen) {
+      throw BusError.create('Bus is not open');
+    }
+  }
+
+  async open(): Promise<this> {
+    try {
+      if (!this.isOpen) {
+        this.i2cBus = await openPromisified(this.busNumber);
+        this.isOpen = true;
       }
-
-      await i2cBus.closeAsync();
-
-      isOpen = false;
-      i2cBus = null;
 
       return this;
-    },
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
 
-    async i2cFuncs() {
-      if (!i2cBus || !isOpen) {
-        throw new BusError('Bus is not open', busNumber);
-      }
+  async close(): Promise<this> {
+    this.guardAgainstClosedBus();
 
-      return i2cBus.i2cFuncsAsync();
-    },
-    async scan() {
-      if (!i2cBus || !isOpen) {
-        throw new BusError('Bus is not open', busNumber);
-      }
+    try {
+      await this.i2cBus.close();
 
-      return i2cBus.scanAsync();
-    },
+      this.isOpen = false;
 
-    async i2cRead(address: number, length: number, buffer: Buffer) {
-      if (!i2cBus || !isOpen) {
-        throw new BusError('Bus is not open', busNumber);
-      }
+      return this;
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
 
-      return i2cBus.i2cReadAsync(address, length, buffer);
-    },
-    async i2cWrite(address: number, length: number, buffer: Buffer) {
-      if (!i2cBus || !isOpen) {
-        throw new BusError('Bus is not open', busNumber);
-      }
+  async i2cFuncs(): Promise<I2cFuncs> {
+    this.guardAgainstClosedBus();
 
-      return i2cBus.i2cWriteAsync(address, length, buffer);
-    },
+    try {
+      const result = await this.i2cBus.i2cFuncs();
 
-    async receiveByte(address: number) {
-      if (!i2cBus || !isOpen) {
-        throw new BusError('Bus is not open', busNumber);
-      }
+      return result;
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
 
-      return i2cBus.receiveByteAsync(address);
-    },
-    async sendByte(address: number, byte: number) {
-      if (!i2cBus || !isOpen) {
-        throw new BusError('Bus is not open', busNumber);
-      }
+  async readByte(address: number, command: number): Promise<number> {
+    this.guardAgainstClosedBus();
 
-      return i2cBus.sendByteAsync(address, byte);
-    },
+    try {
+      const result = await this.i2cBus.readByte(address, command);
 
-    async readByte(address: number, command: number) {
-      if (!i2cBus || !isOpen) {
-        throw new BusError('Bus is not open', busNumber);
-      }
+      return result;
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
 
-      return i2cBus.readByteAsync(address, command);
-    },
-    async readWord(address: number, command: number) {
-      if (!i2cBus || !isOpen) {
-        throw new BusError('Bus is not open', busNumber);
-      }
+  async readWord(address: number, command: number): Promise<number> {
+    this.guardAgainstClosedBus();
 
-      return i2cBus.readWordAsync(address, command);
-    },
-    async readI2cBlock(address: number, command: number, length: number, buffer: Buffer) {
-      if (!i2cBus || !isOpen) {
-        throw new BusError('Bus is not open', busNumber);
-      }
+    try {
+      const result = await this.i2cBus.readWord(address, command);
 
-      return i2cBus.readI2cBlockAsync(address, command, length, buffer);
-    },
+      return result;
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
 
-    async writeByte(address: number, command: number, byte: number) {
-      if (!i2cBus || !isOpen) {
-        throw new BusError('Bus is not open', busNumber);
-      }
+  async readI2cBlock(address: number, command: number, length: number, buffer: Buffer): Promise<I2cReadResponse> {
+    this.guardAgainstClosedBus();
 
-      return i2cBus.writeByteAsync(address, command, byte);
-    },
-    async writeWord(address: number, command: number, word: number) {
-      if (!i2cBus || !isOpen) {
-        throw new BusError('Bus is not open', busNumber);
-      }
+    try {
+      const result = await this.i2cBus.readI2cBlock(address, command, length, buffer);
 
-      return i2cBus.writeWordAsync(address, command, word);
-    },
-    async writeI2cBlock(address: number, command: number, length: number, buffer: Buffer) {
-      if (!i2cBus || !isOpen) {
-        throw new BusError('Bus is not open', busNumber);
-      }
+      return result;
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
 
-      return i2cBus.writeI2cBlockAsync(address, command, length, buffer);
-    },
-  };
-};
+  async receiveByte(address: number): Promise<number> {
+    this.guardAgainstClosedBus();
 
-export default Bus;
+    try {
+      const result = await this.i2cBus.receiveByte(address);
+
+      return result;
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
+
+  async sendByte(address: number, byte: number): Promise<this> {
+    this.guardAgainstClosedBus();
+
+    try {
+      await this.i2cBus.sendByte(address, byte);
+
+      return this;
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
+
+  async writeByte(address: number, command: number, byte: number): Promise<this> {
+    this.guardAgainstClosedBus();
+
+    try {
+      await this.i2cBus.writeByte(address, command, byte);
+
+      return this;
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
+
+  async writeWord(address: number, command: number, word: number): Promise<this> {
+    this.guardAgainstClosedBus();
+
+    try {
+      await this.i2cBus.writeWord(address, command, word);
+
+      return this;
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
+
+  async writeQuick(address: number, bit: 0 | 1): Promise<this> {
+    this.guardAgainstClosedBus();
+
+    try {
+      await this.i2cBus.writeQuick(address, bit);
+
+      return this;
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
+
+  async writeI2cBlock(address: number, command: number, length: number, buffer: Buffer): Promise<I2cWriteResponse> {
+    this.guardAgainstClosedBus();
+
+    try {
+      const result = await this.i2cBus.writeI2cBlock(address, command, length, buffer);
+
+      return result;
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
+
+  async i2cRead(address: number, length: number, buffer: Buffer): Promise<I2cReadResponse> {
+    this.guardAgainstClosedBus();
+
+    try {
+      const result = await this.i2cBus.i2cRead(address, length, buffer);
+
+      return result;
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
+
+  async i2cWrite(address: number, length: number, buffer: Buffer): Promise<I2cWriteResponse> {
+    this.guardAgainstClosedBus();
+
+    try {
+      const result = await this.i2cBus.i2cWrite(address, length, buffer);
+
+      return result;
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
+
+  async scan(startAddress?: number, endAddress?: number): Promise<number[]> {
+    this.guardAgainstClosedBus();
+
+    try {
+      const result = await this.i2cBus.scan(startAddress, endAddress);
+
+      return result;
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
+
+  async deviceId(address: number): Promise<number> {
+    this.guardAgainstClosedBus();
+
+    try {
+      const result = await this.i2cBus.deviceId(address);
+
+      return result;
+    } catch (error) {
+      throw BusError.createFromError(error);
+    }
+  }
+
+  static create({ busNumber }: { busNumber: number }): Bus {
+    return new Bus({ busNumber });
+  }
+
+  static createAndOpen({ busNumber }: { busNumber: number }): Promise<Bus> {
+    const bus = new Bus({ busNumber });
+
+    return bus.open();
+  }
+}

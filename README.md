@@ -1,73 +1,107 @@
-# async-i2c-bus
+<h1 align="center">async-i2c-bus</h1>
+<p align="center">
+		<a href="https://npmcharts.com/compare/async-i2c-bus?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/async-i2c-bus.svg" height="20"/></a>
+<a href="https://www.npmjs.com/package/async-i2c-bus"><img alt="NPM Version" src="https://img.shields.io/npm/v/async-i2c-bus.svg" height="20"/></a>
+<a href="https://david-dm.org/AlejandroHerr/async-i2c-bus"><img alt="Dependencies" src="https://img.shields.io/david/AlejandroHerr/async-i2c-bus.svg" height="20"/></a>
+<a href="https://github.com/AlejandroHerr/async-i2c-bus/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/AlejandroHerr/async-i2c-bus.svg" height="20"/></a>
+<a href="https://circleci.com/gh/AlejandroHerr/async-i2c-bus"><img alt="CircleCI" src="https://img.shields.io/circleci/project/github/AlejandroHerr/async-i2c-bus/master.svg?style=flat-square&logo=circleci" height="20"/></a>
+<a href="https://codecov.io/gh/AlejandroHerr/async-i2c-bus"><img alt="codecov" src="https://codecov.io/gh/AlejandroHerr/async-i2c-bus/branch/master/graph/badge.svg" height="20"/></a>
+<a href="http://commitizen.github.io/cz-cli/"><img alt="Commitizen friendly" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square" height="20"/></a>
+<a href="https://github.com/semantic-release/semantic-release"><img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square" height="20"/></a>
+	</p>
 
-[![Npm Package](https://img.shields.io/npm/v/async-i2c-bus.svg)](https://www.npmjs.com/package/async-i2c-bus) [![Dependencies](https://img.shields.io/david/AlejandroHerr/async-i2c-bus.svg?style=flat-square)](https://david-dm.org/alejandroherr/async-i2c-bus) [![Dev Dependencies](https://img.shields.io/david/dev/AlejandroHerr/async-i2c-bus.svg?style=flat-square)](https://david-dm.org/alejandroherr/async-i2c-bus?type=dev) ![CircleCI](https://img.shields.io/circleci/project/github/AlejandroHerr/async-i2c-bus/master.svg?style=flat-square&logo=circleci) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![MIT License](https://img.shields.io/github/license/AlejandroHerr/async-i2c-bus.svg?style=flat-square)](https://github.com/AlejandroHerr/async-i2c-bus/blob/master/LICENSE.md)
+<p align="center">
+  <b>Bus and Device classes for i2c-bus, with promised functions.</b></br>
+  <sub><sub>
+</p>
 
-Promised Bus and Device factories for [i2c-bus](https://github.com/fivdi/i2c-bus).
+<br />
 
-This package replaces [i2c-bus-promised](https://github.com/AlejandroHerr/i2c-bus-promised)
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/dark.png)](#table-of-contents)
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+	* [Bus](#bus)
+	* [Device](#device)
+	* [BusError](#buserror)
+	* [Example](#example)
+	* [Example using custom device](#example-using-custom-device)
+* [License](#license)
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/dark.png)](#installation)
 
 ## Installation
 
-Choose your flavour, yarn:
-
-```bash
+```javascript
 yarn add async-i2c-bus
+
+// or
+
+npm i async-i2c-bus
 ```
 
-or npm:
 
-```bash
-npm i -P async-i2c-bus
-```
-
-And you're ready to go.
-
-### Requirements
-
-The package requires node `v8.10.x` or higher.
-If you need a compatibility with lower versions of node, you can build it. To do so clone the repo in your workspace, and modify the `target` options in the `tsconfig.json`, e.g:
-
-```js
-{
-  "compilerOptions": {
-    "target": "es5", // <-- Line changed
-    "outDir": "dist/main",
-    "rootDir": "src",
-    // ..
-  }
-}
-```
-
-And build the module with `yarn build` or `npm run build`.
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/dark.png)](#usage)
 
 ## Usage
 
-The package exports the `Bus` factory to create a `BusInterface`. The `BusInterface` is an object with the same methods available in the original `i2c-bus` but promised. The signature of the factory is the following:
+The package exports the `Bus`, `Device` and `BusError` classes.
 
-```js
-const Bus = ({ busNumber = 1, openBus = openI2cBus } = {}): BusInterface
-```
+### Bus
 
-- `busNumber` is the i2c bus number, and defaults to 1. Unless your devices has more than one bus, it will suit you.
-- `openBus` is the function to open the bus. It defaults to `i2c.openBus`, but it would accept any function with the same signature. You shouldn't pass this value, except if you're in a testing environment.
+The `Bus` wraps the original implementation with a `typescript` class.
 
-The package also exports the `Device` factory to create a `DeviceInterface`. This is a helper method to call the `i2cBus` methods with the address of your device. It has the following signature:
+To create a `Bus` use the static method `create` or `createAndOpen` (also opens the `bus`) with the following signatures:
 
-```js
-const Device = ({ address, bus }: { address: number; bus: BusInterface }): DeviceInterface
-```
+`Bus.create({ busNumber }): Bus`
 
-You don't need to use a `DeviceInterface` in order to work with this library, but it helps.
+| Name        | Type   |
+| ----------- | ------ |
+| `busNumber` | number |
 
-For more details, check the full auto-generated [documentation](https://async-i2c-bus.alejandroherr.io).
+**Returns:** Bus
+
+`Bus.createAndOpen({ busNumber }): Promise<Bus>`
+
+| Name        | Type   |
+| ----------- | ------ |
+| `busNumber` | number |
+
+**Returns:** Promise‹Bus›
+
+### Device
+
+`Device` inherits all the device-oriented methods from `Bus` and calls them with the device's address.
+
+Also you can extends / compose it to create your specific device class. Read further for an example of it.
+
+To create a `Device` use the static method `create` with the following signature:
+
+`Device.create({ busNumber }): Device`
+
+| Name      | Type   |
+| --------- | ------ |
+| `bus`     | bus    |
+| `address` | number |
+
+**Returns:** Device
+
+### BusError
+
+All the errors thrown by the bus are wrapped into `BusError`, which keeps the message and stack of the original error, but makes it easier to catch bus-specific errors.
 
 ### Example
 
-```js
+```javascript
+import { Bus, Device } from 'async-i2c-bus';
+
 const WEATHER_SENSOR_ADDRESS = 0x77;
 
 const main = async () => {
-  const bus = Bus();
+  const bus = Bus.create();
 
   await bus.open();
 
@@ -75,7 +109,7 @@ const main = async () => {
 
   console.log(`Connected devices ${devices}`);
 
-  const weatherSensor = Device({ address: WEATHER_SENSOR_ADDRESS, bus });
+  const weatherSensor = Device.create({ address: WEATHER_SENSOR_ADDRESS, bus });
 
   // Configure Weather Sensor (BMP280)
   await weatherSensor.writeByte(0xf4, 0b00100101);
@@ -90,71 +124,39 @@ const main = async () => {
 };
 ```
 
-### Example extending device
+### Example using custom device
 
-Also you can extend your device to implement specific methods. Take the previous case:
+```javascript
+import { Device } from 'async-i2c-bus';
 
-```js
-const WeatherSensor = ({ bus }) => ({
-  ...Device({ address: 0x77, bus }),
-  async init() {
-    await this.writeByte(0xf4, 0b00100101);
-    await this.writeByte(0xf5, 0b00100100);
+const WEATHER_SENSOR_ADDRESS = 0x77;
 
-    return this;
-  },
+class WeatherSensor {
+  constructor({ bus }) {
+    this.device = Device.create({ bus, address: WEATHER_SENSOR_ADDRESS });
+  }
+
   async readTemperature() {
     const buffer = Buffer.alloc(3);
 
-    await this.readI2cBlock(0xfa, 3, buffer);
+    await this.bus.readI2cBlock(0xfa, 3, buffer);
 
     return buffer.readUIntBE(0, 3) >>> 4;
-  },
-});
-
-const main = async () => {
-  const bus = Bus();
-
-  await bus.open();
-
-  const weatherSensor = await WeatherSensor({ bus }).init();
-  const temperature = await weatherSensor.readTemperature();
-
-  console.log(`Temperature: ${temperature}`);
-};
+  }
+}
 ```
 
-### Testing
 
-Testing i2c code can be expensive and slow. It may take some time to deploy and run your e2e tests/code in a low powered device. For that, you can use the `createI2cBusMock` function and write some unit tests. Although you shouldn't relay too much on the values read and written (it works as if the i2c bus is just a memory), it can help you to test that the right functions are being invoked.
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/dark.png)](#license)
 
-```js
-import { Bus, Device } from '../dist/main';
+## License
+	
+Licensed under [MIT](https://opensource.org/licenses/MIT).
 
-jest.mock('i2c-bus', () => {
-  const createI2cBusMock = require('../dist/main/lib/createI2cBusMock').default; // eslint-disable-line global-require
-
-  return {
-    open: createI2cBusMock({
-      devices: {
-        0xab: Buffer.allocUnsafe(0xff),
-      },
-    }),
-  };
-});
-
-describe('Device', () => {
-  it('should write the right command', async () => {
-    const busNumber = 1;
-    const bus = Bus({ busNumber });
-    const address = 0xab;
-    const device = Device({ address, bus });
-
-    await bus.open();
-
-    const spyOnWriteByte = jest.spyOn(bus, 'writeByte');
-    await device.writeByte(0x0f, 0xff);
-    expect(spyOnWriteByte).toHaveBeenCalledWith(address, 0x0f, 0xff);
-  });
-});
-```
+<!-- [![Npm Package](https://img.shields.io/npm/v/homieiot.ts?style=flat-square)](https://www.npmjs.com/package/homieiot.ts)
+[![Dependencies](https://img.shields.io/david/AlejandroHerr/homieiot.ts.svg?style=flat-square)](https://david-dm.org/alejandroherr/homieiot.ts)
+[![Dev Dependencies](https://img.shields.io/david/dev/AlejandroHerr/homieiot.ts.svg?style=flat-square)](https://david-dm.org/alejandroherr/homieiot.ts?type=dev)
+[![CircleCI](https://img.shields.io/circleci/project/github/AlejandroHerr/homieiot.ts/master.svg?style=flat-square&logo=circleci)](https://circleci.com/gh/AlejandroHerr/homieiot.ts)
+[![codecov](https://codecov.io/gh/AlejandroHerr/homieiot.ts/branch/master/graph/badge.svg)](https://codecov.io/gh/AlejandroHerr/homieiot.ts)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) -->
