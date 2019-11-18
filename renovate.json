@@ -1,10 +1,13 @@
 {
   "extends": ["config:base"],
-
   "packageRules": [
     {
-      "extends": "monorepo:typography-js",
-      "groupName": "typography-js monorepo"
+      "extends": "monorepo:jest",
+      "groupName": "jest monorepo"
+    },
+    {
+      "extends": "monorepo:typescript-eslint",
+      "groupName": "typescript-eslint monorepo"
     }
   ]
 }
