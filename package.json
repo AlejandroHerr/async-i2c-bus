@@ -42,8 +42,8 @@
   "devDependencies": {
     "@appnest/readme": "1.2.5",
     "@types/jest": "24.0.23",
-    "@typescript-eslint/eslint-plugin": "2.7.0",
-    "@typescript-eslint/parser": "2.7.0",
+    "@typescript-eslint/eslint-plugin": "2.8.0",
+    "@typescript-eslint/parser": "2.8.0",
     "codecov": "3.6.1",
     "cz-conventional-changelog": "3.0.2",
     "eslint": "6.6.0",
